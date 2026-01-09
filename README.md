@@ -1,5 +1,5 @@
   # AI-Native Healthcare SaaS Website
-  # Abdullah
+
   ## Running the code
 
   Run `npm i` to install the dependencies.

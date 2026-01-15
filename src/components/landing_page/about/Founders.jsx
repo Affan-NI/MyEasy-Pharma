@@ -1,6 +1,7 @@
 import { GraduationCap, Briefcase, Users, Globe } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+
 export function Founders() {
   return (
     <section className="py-20 bg-gradient-to-br from-indigo-50 to-purple-50">

@@ -5,6 +5,8 @@ import { Simplification } from "./Simplification";
 import { NextGen } from "./NextGen";
 import { Categories } from "./Categories";
 
+
+
 function HomePage() {
     return ( 
         <>

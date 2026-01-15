@@ -1,6 +1,7 @@
 import { ArrowRight, Users, Lightbulb, Heart, Sparkles } from 'lucide-react';
 
-export function CallToAction() {
+
+export function CallToAction({ onContactClick, onDemoClick }) {
   return (
     <section className="py-20 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white relative overflow-hidden">
       {/* Background decorations */}
@@ -86,23 +87,27 @@ export function CallToAction() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="w-full sm:w-auto px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all flex items-center justify-center gap-2 group text-lg font-semibold shadow-lg">
+            <button onClick={onContactClick}
+                aria-label="Get in touch with our team" className="w-full sm:w-auto px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all flex items-center justify-center gap-2 group text-lg font-semibold shadow-lg">
               <span>Get in Touch</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="w-full sm:w-auto px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white/10 transition-all text-lg font-semibold">
+            <button onClick={onDemoClick}
+                aria-label="Schedule a product demo" className="w-full sm:w-auto px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white/10 transition-all text-lg font-semibold">
               Schedule a Demo
             </button>
           </div>
 
           {/* Tagline */}
-          <div className="mt-12 text-center">
+          {/* <div className="mt-12 text-center">
             <p className="text-2xl font-semibold tracking-wide">
               Learn. Integrate. Collaborate. Transform.
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
   );
 }
+
+//  ye mere project ka ak component h means ye file h src ke ander component folder me landing_page folder ke ander contact folder ke ander CallToAction file h ab ye sirf UI h pr mujhe isme functionalities add krni h Jaise isme two button h get in touch and schecule a demo h to isme functionalities add krni h lekin saprate file bnake to mujhe step by step btao kya kya krna h kaise kaise krna h

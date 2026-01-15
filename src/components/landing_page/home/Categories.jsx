@@ -1,5 +1,6 @@
 import { Activity, Heart, Thermometer, Leaf, Wind, Package } from 'lucide-react';
 
+
 export function Categories() {
   const categories = [
     {

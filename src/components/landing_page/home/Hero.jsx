@@ -7,6 +7,9 @@ import {
 import { motion } from "framer-motion";
 import DNAHelix from "@/components/landing_page/home/DNAHelix";
 
+
+
+
 export function Hero() {
   return (
     <section

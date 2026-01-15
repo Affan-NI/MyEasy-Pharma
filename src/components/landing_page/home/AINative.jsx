@@ -1,6 +1,7 @@
 import { Brain, Zap, Shield, TrendingUp } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+
 export function AINative() {
   return (
     <section className="py-20 bg-white">

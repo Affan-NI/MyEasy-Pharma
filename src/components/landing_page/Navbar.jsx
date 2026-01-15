@@ -1,7 +1,6 @@
 import { Pill, Menu, X } from 'lucide-react';
 import { useState } from 'react';
-// import { Link } from 'lucide-react';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 export function Navbar() {
@@ -24,12 +23,12 @@ export function Navbar() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
-            <Link to="/" className="text-sm text-gray-700 hover:text-blue-600 transition-colors">Home</Link>
-            <Link to="/pharma40" className="text-sm text-gray-700 hover:text-blue-600 transition-colors">Pharma 4.0</Link>
-            <Link to="/platform" className="text-sm text-gray-700 hover:text-blue-600 transition-colors">Platform</Link>
-            <Link to="/service" className="text-sm text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
-            <Link to="/about" className="text-sm text-gray-700 hover:text-blue-600 transition-colors">About</Link>
-            <Link to="/contact" className="text-sm text-gray-700 hover:text-blue-600 transition-colors">Contact</Link>
+            <NavLink to="/" className={({ isActive }) => isActive ? "text-sm text-blue-600 font-semibold bg-blue-50 rounded-md px-3 py-1 transition-colors" : "text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md px-3 py-1 transition-colors"}>Home</NavLink>
+            <NavLink to="/pharma40" className={({ isActive }) => isActive ? "text-sm text-blue-600 font-semibold bg-blue-50 rounded-md px-3 py-1 transition-colors" : "text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md px-3 py-1 transition-colors"}>Pharma 4.0</NavLink>
+            <NavLink to="/platform" className={({ isActive }) => isActive ? "text-sm text-blue-600 font-semibold bg-blue-50 rounded-md px-3 py-1 transition-colors" : "text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md px-3 py-1 transition-colors"}>Platform</NavLink>
+            <NavLink to="/service" className={({ isActive }) => isActive ? "text-sm text-blue-600 font-semibold bg-blue-50 rounded-md px-3 py-1 transition-colors" : "text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md px-3 py-1 transition-colors"}>Services</NavLink>
+            <NavLink to="/about" className={({ isActive }) => isActive ? "text-sm text-blue-600 font-semibold bg-blue-50 rounded-md px-3 py-1 transition-colors" : "text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md px-3 py-1 transition-colors"}>About</NavLink>
+            <NavLink to="/contact" className={({ isActive }) => isActive ? "text-sm text-blue-600 font-semibold bg-blue-50 rounded-md px-3 py-1 transition-colors" : "text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md px-3 py-1 transition-colors"}>Contact</NavLink>
           </nav>
 
           {/* CTA Button */}
@@ -52,12 +51,12 @@ export function Navbar() {
         {mobileMenuOpen && (
           <div className="lg:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col gap-3">
-              <a href="#home" className="text-sm text-gray-700 hover:text-blue-600 py-2">Home</a>
-              <a href="#pharma40" className="text-sm text-gray-700 hover:text-blue-600 py-2">Pharma 4.0</a>
-              <a href="#platform" className="text-sm text-gray-700 hover:text-blue-600 py-2">Platform</a>
-              <a href="#services" className="text-sm text-gray-700 hover:text-blue-600 py-2">Services</a>
-              <a href="#about" className="text-sm text-gray-700 hover:text-blue-600 py-2">About</a>
-              <a href="#contact" className="text-sm text-gray-700 hover:text-blue-600 py-2">Contact</a>
+              <NavLink to="/" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => isActive ? "text-sm text-blue-600 font-semibold bg-blue-50 rounded-md px-3 py-2 transition-colors" : "text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md px-3 py-2 transition-colors"}>Home</NavLink>
+              <NavLink to="/pharma40" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => isActive ? "text-sm text-blue-600 font-semibold bg-blue-50 rounded-md px-3 py-2 transition-colors" : "text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md px-3 py-2 transition-colors"}>Pharma 4.0</NavLink>
+              <NavLink to="/platform" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => isActive ? "text-sm text-blue-600 font-semibold bg-blue-50 rounded-md px-3 py-2 transition-colors" : "text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md px-3 py-2 transition-colors"}>Platform</NavLink>
+              <NavLink to="/service" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => isActive ? "text-sm text-blue-600 font-semibold bg-blue-50 rounded-md px-3 py-2 transition-colors" : "text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md px-3 py-2 transition-colors"}>Services</NavLink>
+              <NavLink to="/about" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => isActive ? "text-sm text-blue-600 font-semibold bg-blue-50 rounded-md px-3 py-2 transition-colors" : "text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md px-3 py-2 transition-colors"}>About</NavLink>
+              <NavLink to="/contact" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => isActive ? "text-sm text-blue-600 font-semibold bg-blue-50 rounded-md px-3 py-2 transition-colors" : "text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md px-3 py-2 transition-colors"}>Contact</NavLink>
             </nav>
           </div>
         )}

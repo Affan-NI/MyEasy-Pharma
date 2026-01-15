@@ -14,7 +14,22 @@ import HomePage from './components/landing_page/home/HomePage';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import { useState } from "react";
+import { ContactModal } from "./components/landing_page/contact/contactLogic/ContactModal";
+// import { useScheduleDemo } from "./components/landing_page/contact/contactLogic/useScheduleDemo";
+
+import { DemoModal } from "./components/landing_page/contact/contactLogic/DemoModal";
+
+
+
 export default function App() {
+
+  const [contactOpen, setContactOpen] = useState(false);
+  // const { scheduleDemo } = useScheduleDemo();
+
+  const [demoOpen, setDemoOpen] = useState(false);
+
+
   return (
     <div className="min-h-screen bg-white">
       <BrowserRouter>
@@ -51,7 +66,28 @@ export default function App() {
           }/>
           {/* <AboutUs /> ..............*/}
           {/* <Founders /> .....*/}
-          <Route path='/contact' element={<CallToAction/>}/>
+          {/* <Route path='/contact' element={<CallToAction/>}/> */}
+          <Route
+            path="/contact"
+            element={
+              <>
+                <CallToAction
+                  onContactClick={() => setContactOpen(true)}
+                  onDemoClick={() => setDemoOpen(true)}
+                />
+                <DemoModal
+                  open={demoOpen}
+                  onClose={() => setDemoOpen(false)}
+                />
+
+                <ContactModal
+                  open={contactOpen}
+                  onClose={() => setContactOpen(false)}
+                />
+              </>
+            }
+          />
+
           {/* <CallToAction .............../> */}
         </Routes>
         <Footer />

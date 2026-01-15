@@ -1,6 +1,7 @@
 import { Building2, Award, Users, Lightbulb, CheckCircle, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+
 export function AboutUs() {
   const milestones = [
     { label: 'Incorporated', value: 'Nov 2024' },

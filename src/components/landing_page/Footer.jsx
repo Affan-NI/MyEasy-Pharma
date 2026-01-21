@@ -8,8 +8,9 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center">
-                <Pill className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                {/* <Pill className="w-6 h-6 text-white" /> */}
+                <img src="/images/Logo2.png" alt="logo" />
               </div>
               <div>
                 <div className="text-lg font-semibold text-white">MyEasy Pharma</div>
@@ -20,7 +21,7 @@ export function Footer() {
               An AI-native platform shaping India's healthcare future through Pharma 4.0 innovation
             </p>
             <div className="flex gap-3">
-              <a href="#" className="w-9 h-9 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
+              <a href="https://www.linkedin.com/company/myeasypharma/" className="w-9 h-9 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
                 <Linkedin className="w-4 h-4" />
               </a>
               <a href="#" className="w-9 h-9 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors">
@@ -62,18 +63,18 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-sm">
                 <MapPin className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
-                <span>GIMS Incubator, Greater Noida<br />Uttar Pradesh, India</span>
+                <span>Unit 101, Oxford Towers, 139 HAL Old Airport Rd, Kodihalli, Bangalore<br /> Karnataka-560008, India</span>
               </li>
               <li className="flex items-center gap-2 text-sm">
                 <Mail className="w-4 h-4 text-blue-400 flex-shrink-0" />
                 <a href="mailto:info@myeasypharma.com" className="hover:text-blue-400 transition-colors">
-                  info@myeasypharma.com
+                  contact@myeasypharma.com
                 </a>
               </li>
               <li className="flex items-center gap-2 text-sm">
                 <Phone className="w-4 h-4 text-blue-400 flex-shrink-0" />
                 <a href="tel:+919876543210" className="hover:text-blue-400 transition-colors">
-                  +91 98765 43210
+                  +91 9350318639
                 </a>
               </li>
             </ul>
@@ -92,14 +93,14 @@ export function Footer() {
               <a href="#" className="hover:text-blue-400 transition-colors">Data Security</a>
             </div>
           </div>
-          <div className="mt-4 text-center">
+          {/* <div className="mt-4 text-center">
             <p className="text-xs text-gray-500">
               Startup India Registered | MSME Registered | Incubated at GIMS, Noida
             </p>
             <p className="text-xs text-gray-500 mt-1">
               Pre-Incubated at BITS Pilani & IIM Lucknow
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

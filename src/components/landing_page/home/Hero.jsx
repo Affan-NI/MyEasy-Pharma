@@ -14,8 +14,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative pt-[5px] pb-[10px] bg-gradient-to-br from-blue-50 via-indigo-50 to-white overflow-hidden pr-[0px] pl-[0px]"
-    >
+      className="relative  bg-gradient-to-br from-blue-50 via-indigo-50 to-white overflow-hidden pr-[0px] pl-[0px]">
       {/* Background decorations */}
       {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div

@@ -10,14 +10,15 @@ export function Navbar() {
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
+          
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center">
-              <Pill className="w-6 h-6 text-white" />
+            <div className="w-15 h-10 bg-white-600 rounded-lg flex items-center justify-center">
+              <img src="/images/Logo2.png" alt="logo" />
             </div>
             <div>
               <div className="text-lg font-semibold text-gray-900">MyEasy Pharma</div>
-              <div className="text-[10px] text-teal-600 -mt-1">Pvt Ltd</div>
+
             </div>
           </div>
 

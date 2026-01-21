@@ -20,6 +20,7 @@ import { ContactModal } from "./components/landing_page/contact/contactLogic/Con
 
 import { DemoModal } from "./components/landing_page/contact/contactLogic/DemoModal";
 
+import QuickContactCTA from "./components/landing_page/contact/QuickContactCTA";
 
 
 export default function App() {
@@ -28,6 +29,10 @@ export default function App() {
   // const { scheduleDemo } = useScheduleDemo();
 
   const [demoOpen, setDemoOpen] = useState(false);
+
+  // const [role, setRole] = useState(null);
+  // const [interest, setInterest] = useState(null);
+
 
 
   return (
@@ -75,6 +80,10 @@ export default function App() {
                   onContactClick={() => setContactOpen(true)}
                   onDemoClick={() => setDemoOpen(true)}
                 />
+                <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white pb-10 flex justify-center">
+                  <QuickContactCTA />
+                </div>
+
                 <DemoModal
                   open={demoOpen}
                   onClose={() => setDemoOpen(false)}

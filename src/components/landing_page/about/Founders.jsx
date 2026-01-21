@@ -1,5 +1,7 @@
 import { GraduationCap, Briefcase, Users, Globe } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 
 export function Founders() {
@@ -151,6 +153,68 @@ export function Founders() {
               </div>
             </div>
           </div>
+          {/* Guided Cross Links */}
+          <div className="mt-16">
+            <div className="text-center mb-8">
+              <p className="text-sm uppercase tracking-wide text-gray-500">
+                Continue Exploring
+              </p>
+              <h4 className="text-2xl text-gray-900 mt-2">
+                Where would you like to go next?
+              </h4>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              
+              <Link
+                to="/platform"
+                className="group bg-white border border-gray-200 rounded-xl p-6 hover:border-indigo-300 hover:shadow-md transition"
+              >
+                <div className="flex items-center justify-between mb-3">
+                  <h5 className="text-lg font-semibold text-gray-900">
+                    Platform Overview
+                  </h5>
+                  <ArrowRight className="w-5 h-5 text-indigo-600 group-hover:translate-x-1 transition" />
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  See how our AI-native platform translates vision into real-world healthcare impact.
+                </p>
+              </Link>
+
+              <Link
+                to="/pharma40"
+                className="group bg-white border border-gray-200 rounded-xl p-6 hover:border-indigo-300 hover:shadow-md transition"
+              >
+                <div className="flex items-center justify-between mb-3">
+                  <h5 className="text-lg font-semibold text-gray-900">
+                    Pharma 4.0 Framework
+                  </h5>
+                  <ArrowRight className="w-5 h-5 text-indigo-600 group-hover:translate-x-1 transition" />
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Understand the philosophy and systems shaping the future of healthcare.
+                </p>
+              </Link>
+
+              <Link
+                to="/contact"
+                className="group bg-white border border-gray-200 rounded-xl p-6 hover:border-indigo-300 hover:shadow-md transition"
+              >
+                <div className="flex items-center justify-between mb-3">
+                  <h5 className="text-lg font-semibold text-gray-900">
+                    Collaborate With Us
+                  </h5>
+                  <ArrowRight className="w-5 h-5 text-indigo-600 group-hover:translate-x-1 transition" />
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Start a conversation to explore partnerships, pilots, or research collaboration.
+                </p>
+              </Link>
+
+            </div>
+          </div>
+
+
         </div>
       </div>
     </section>

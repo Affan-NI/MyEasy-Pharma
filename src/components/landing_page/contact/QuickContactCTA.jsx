@@ -6,7 +6,7 @@ export default function QuickContactCTA() {
       
       {/* WhatsApp */}
       <a
-        href="https://wa.me/91XXXXXXXXXX"
+        href="https://wa.me/919350318639"
         target="_blank"
         className="flex items-center gap-2 px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition"
       >
@@ -16,7 +16,7 @@ export default function QuickContactCTA() {
 
       {/* Call */}
       <a
-        href="tel:+91XXXXXXXXXX"
+        href="tel:+919350318639"
         className="flex items-center gap-2 px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition"
       >
         <Phone size={20} />

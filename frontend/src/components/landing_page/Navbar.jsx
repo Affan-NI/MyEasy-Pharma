@@ -2,6 +2,7 @@ import { MapPin, ShoppingCart, User, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Link } from "lucide-react";
+import Addres from "./addres";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -37,8 +38,9 @@ export function Navbar() {
             </div>
 
             <div className="hidden md:flex items-center gap-1 text-sm text-gray-600 cursor-pointer">
-              <MapPin size={16} />
-              <span>Select Address</span>
+              {/* <MapPin size={16} />
+              <span>Select Address</span> */}
+              <Addres />
             </div>
           </div>
 

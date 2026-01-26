@@ -28,7 +28,7 @@ export function Navbar() {
               <img
                 src="/images/Logo2.png"
                 alt="logo"
-                className="h-8 w-auto"
+                className="h-14 w-auto"
               />
               <span className="font-semibold text-lg text-gray-900">
                 MyEasy Pharma
@@ -79,17 +79,21 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Category Bar (Apollo Style) */}
+      {/* Category Bar  */}
       <div className="bg-[#0f3f3a] hidden lg:block">
         <div className="container mx-auto px-6 h-11 flex items-center gap-6 text-white text-sm overflow-x-auto">
-          <span className="cursor-pointer">Apollo Products</span>
-          <span className="cursor-pointer">Baby Care</span>
+          <span className="cursor-pointer">Products</span>
+          {/* <span className="cursor-pointer">Baby Care</span> */}
           <span className="cursor-pointer">Nutrition</span>
           <span className="cursor-pointer">Women Care</span>
-          <span className="cursor-pointer">Personal Care</span>
-          <span className="cursor-pointer">Ayurveda</span>
-          <span className="cursor-pointer">Health Devices</span>
-          <span className="cursor-pointer">Home Essentials</span>
+          <span className="cursor-pointer">Diabetes Care</span>
+          <span className="cursor-pointer">Heart Care</span>
+          <span className="cursor-pointer">Doctors & Clinicians</span>
+          <span className="cursor-pointer">Pharma & Research</span>
+          <span className="cursor-pointer">Diet Plan</span>
+          <span className="cursor-pointer">Care Coordinators</span>
+          {/* <span className="cursor-pointer">Health Devices</span> */}
+          {/* <span className="cursor-pointer">Home Essentials</span> */}
         </div>
       </div>
 

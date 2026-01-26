@@ -34,9 +34,12 @@ export function Navbar() {
 
           {/* CTA Button */}
           <div className="flex items-center gap-3">
-            <button className="hidden md:block px-5 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm rounded-lg hover:shadow-lg transition-all">
-              Get Started
+            <a href="http://localhost:8501">
+              <button className="hidden md:block px-5 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm rounded-lg hover:shadow-lg transition-all">
+              Intelligent Disease Predictor
             </button>
+            </a>
+            
             
             {/* Mobile Menu Button */}
             <button 

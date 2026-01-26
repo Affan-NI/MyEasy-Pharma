@@ -1,6 +1,7 @@
 import { MapPin, ShoppingCart, User, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { Link } from "lucide-react";
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -50,8 +51,8 @@ export function Navbar() {
               Login
             </button>
 
-            <a href="http://10.78.227.141:8501">
-              <button className="hidden md:block px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm rounded-lg">
+            <a href="http://localhost:8501">
+              <button className="hidden md:block px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-sm rounded-lg">
                 Intelligent Disease Predictor
               </button>
             </a>
@@ -82,16 +83,15 @@ export function Navbar() {
       {/* Category Bar  */}
       <div className="bg-[#0f3f3a] hidden lg:block">
         <div className="container mx-auto px-6 h-11 flex items-center gap-6 text-white text-sm overflow-x-auto">
-          <span className="cursor-pointer">Products</span>
-          {/* <span className="cursor-pointer">Baby Care</span> */}
-          <span className="cursor-pointer">Nutrition</span>
-          <span className="cursor-pointer">Women Care</span>
-          <span className="cursor-pointer">Diabetes Care</span>
-          <span className="cursor-pointer">Heart Care</span>
-          <span className="cursor-pointer">Doctors & Clinicians</span>
-          <span className="cursor-pointer">Pharma & Research</span>
-          <span className="cursor-pointer">Diet Plan</span>
-          <span className="cursor-pointer">Care Coordinators</span>
+          <NavLink to="/commingsoon" state="Products" className="cursor-pointer">Products</NavLink>
+          <NavLink to="/commingsoon" state="Nutrition" className="cursor-pointer">Nutrition</NavLink>
+          <NavLink to="/commingsoon" state="Women Care" className="cursor-pointer">Women Care</NavLink>
+          <NavLink to="/commingsoon" state="Diabetes Care" className="cursor-pointer">Diabetes Care</NavLink>
+          <NavLink to="/commingsoon" state="Heart Car" className="cursor-pointer">Heart Care</NavLink>
+          <NavLink to="/commingsoon" state="Doctors & Clinicians" className="cursor-pointer">Doctors & Clinicians</NavLink>
+          <NavLink to="/commingsoon" state="Pharma & Research" className="cursor-pointer">Pharma & Research</NavLink>
+          <NavLink to="/commingsoon" state="Diet Plan" className="cursor-pointer">Diet Plan</NavLink>
+          <NavLink to="/commingsoon" state="Care Coordinators" className="cursor-pointer">Care Coordinators</NavLink>
           {/* <span className="cursor-pointer">Health Devices</span> */}
           {/* <span className="cursor-pointer">Home Essentials</span> */}
         </div>

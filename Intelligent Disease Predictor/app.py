@@ -112,6 +112,37 @@ diabetes_model, heart_disease_model, parkinsons_model = load_models()
 
 # --- SIDEBAR NAVIGATION ---
 with st.sidebar:
+    # st.markdown("<a href='https://example.com' style='text-align: center; color: #1e3d59;'>Pro Diagnostic</a>", unsafe_allow_html=True)
+        
+    st.markdown("""
+    <style>
+    /* Sabhi states ke liye text-decoration: none lagana zaruri hai */
+    .custom-button, .custom-button:link, .custom-button:visited, .custom-button:active {
+        display: inline-block;
+        padding: 10px 24px;
+        background-color: #1e3d59;
+        color: white !important;
+        text-decoration: none !important; /* Underline ko puri tarah hatane ke liye */
+        border-radius: 8px;
+        font-weight: bold;
+        text-align: center;
+        transition: 0.3s;
+        width: 100%;
+    }
+    
+    .custom-button:hover {
+        background-color: #2b567a;
+        text-decoration: none !important;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transform: translateY(-2px);
+    }
+    </style>
+    
+    <a href="http://localhost:3000/" target="_blank" class="custom-button">
+        GO TO HOME PAGE
+    </a>
+    """, unsafe_allow_html=True)
+
     if lottie_health:
         st_lottie(lottie_health, height=130, key="nav_anim")
     

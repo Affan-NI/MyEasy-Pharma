@@ -1,70 +1,131 @@
-import { Pill, Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { MapPin, ShoppingCart, User, Menu, X } from "lucide-react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
-
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
-          
-          {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="w-15 h-10 bg-white-600 rounded-lg flex items-center justify-center">
-              <img src="/images/Logo2.png" alt="logo" />
-            </div>
-            <div>
-              <div className="text-lg font-semibold text-gray-900">MyEasy Pharma</div>
+  const navLinkClass = ({ isActive }) =>
+    isActive
+      ? "text-green-700 border-b-2 border-green-700 pb-2 font-semibold"
+      : "text-gray-700 hover:text-green-700";
 
+  const mobileNavLinkClass = ({ isActive }) =>
+    isActive
+      ? "text-green-700 bg-green-50 px-3 py-2 rounded-md font-semibold"
+      : "text-gray-700 hover:text-green-700 hover:bg-green-50 px-3 py-2 rounded-md";
+
+  return (
+    <header className="w-full sticky top-0 z-50 bg-white shadow-sm">
+
+      {/* Top Header */}
+      <div className="border-b">
+        <div className="container mx-auto px-6 h-14 flex items-center justify-between">
+
+          {/* Logo + Address */}
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2">
+              <img
+                src="/images/Logo2.png"
+                alt="logo"
+                className="h-8 w-auto"
+              />
+              <span className="font-semibold text-lg text-gray-900">
+                MyEasy Pharma
+              </span>
+            </div>
+
+            <div className="hidden md:flex items-center gap-1 text-sm text-gray-600 cursor-pointer">
+              <MapPin size={16} />
+              <span>Select Address</span>
             </div>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
-            <NavLink to="/" className={({ isActive }) => isActive ? "text-sm text-blue-600 font-semibold bg-blue-50 rounded-md px-3 py-1 transition-colors" : "text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md px-3 py-1 transition-colors"}>Home</NavLink>
-            <NavLink to="/pharma40" className={({ isActive }) => isActive ? "text-sm text-blue-600 font-semibold bg-blue-50 rounded-md px-3 py-1 transition-colors" : "text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md px-3 py-1 transition-colors"}>Pharma 4.0</NavLink>
-            <NavLink to="/platform" className={({ isActive }) => isActive ? "text-sm text-blue-600 font-semibold bg-blue-50 rounded-md px-3 py-1 transition-colors" : "text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md px-3 py-1 transition-colors"}>Platform</NavLink>
-            <NavLink to="/service" className={({ isActive }) => isActive ? "text-sm text-blue-600 font-semibold bg-blue-50 rounded-md px-3 py-1 transition-colors" : "text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md px-3 py-1 transition-colors"}>Services</NavLink>
-            <NavLink to="/about" className={({ isActive }) => isActive ? "text-sm text-blue-600 font-semibold bg-blue-50 rounded-md px-3 py-1 transition-colors" : "text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md px-3 py-1 transition-colors"}>About</NavLink>
-            <NavLink to="/contact" className={({ isActive }) => isActive ? "text-sm text-blue-600 font-semibold bg-blue-50 rounded-md px-3 py-1 transition-colors" : "text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md px-3 py-1 transition-colors"}>Contact</NavLink>
-          </nav>
+          {/* Right Icons + CTA */}
+          <div className="flex items-center gap-4">
+            <ShoppingCart className="cursor-pointer text-gray-700" />
 
-          {/* CTA Button */}
-          <div className="flex items-center gap-3">
-            <a href="http://10.78.227.141:8501">
-              <button className="hidden md:block px-5 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm rounded-lg hover:shadow-lg transition-all">
-              Intelligent Disease Predictor
+            <button className="hidden md:flex items-center gap-1 border px-3 py-1 rounded-md text-sm">
+              <User size={16} />
+              Login
             </button>
+
+            <a href="http://10.78.227.141:8501">
+              <button className="hidden md:block px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm rounded-lg">
+                Intelligent Disease Predictor
+              </button>
             </a>
-            
-            
+
             {/* Mobile Menu Button */}
-            <button 
+            <button
               className="lg:hidden p-2"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? <X /> : <Menu />}
             </button>
           </div>
         </div>
-
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-200">
-            <nav className="flex flex-col gap-3">
-              <NavLink to="/" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => isActive ? "text-sm text-blue-600 font-semibold bg-blue-50 rounded-md px-3 py-2 transition-colors" : "text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md px-3 py-2 transition-colors"}>Home</NavLink>
-              <NavLink to="/pharma40" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => isActive ? "text-sm text-blue-600 font-semibold bg-blue-50 rounded-md px-3 py-2 transition-colors" : "text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md px-3 py-2 transition-colors"}>Pharma 4.0</NavLink>
-              <NavLink to="/platform" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => isActive ? "text-sm text-blue-600 font-semibold bg-blue-50 rounded-md px-3 py-2 transition-colors" : "text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md px-3 py-2 transition-colors"}>Platform</NavLink>
-              <NavLink to="/service" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => isActive ? "text-sm text-blue-600 font-semibold bg-blue-50 rounded-md px-3 py-2 transition-colors" : "text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md px-3 py-2 transition-colors"}>Services</NavLink>
-              <NavLink to="/about" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => isActive ? "text-sm text-blue-600 font-semibold bg-blue-50 rounded-md px-3 py-2 transition-colors" : "text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md px-3 py-2 transition-colors"}>About</NavLink>
-              <NavLink to="/contact" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => isActive ? "text-sm text-blue-600 font-semibold bg-blue-50 rounded-md px-3 py-2 transition-colors" : "text-sm text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md px-3 py-2 transition-colors"}>Contact</NavLink>
-            </nav>
-          </div>
-        )}
       </div>
+
+      {/* Main Menu (Original Links Preserved) */}
+      <div className="border-b hidden lg:block">
+        <div className="container mx-auto px-6 h-12 flex items-center gap-8 text-sm font-medium">
+          <NavLink to="/" className={navLinkClass}>Home</NavLink>
+          <NavLink to="/pharma40" className={navLinkClass}>Pharma 4.0</NavLink>
+          <NavLink to="/platform" className={navLinkClass}>Platform</NavLink>
+          <NavLink to="/service" className={navLinkClass}>Services</NavLink>
+          <NavLink to="/about" className={navLinkClass}>About</NavLink>
+          <NavLink to="/contact" className={navLinkClass}>Contact</NavLink>
+        </div>
+      </div>
+
+      {/* Category Bar (Apollo Style) */}
+      <div className="bg-[#0f3f3a] hidden lg:block">
+        <div className="container mx-auto px-6 h-11 flex items-center gap-6 text-white text-sm overflow-x-auto">
+          <span className="cursor-pointer">Apollo Products</span>
+          <span className="cursor-pointer">Baby Care</span>
+          <span className="cursor-pointer">Nutrition</span>
+          <span className="cursor-pointer">Women Care</span>
+          <span className="cursor-pointer">Personal Care</span>
+          <span className="cursor-pointer">Ayurveda</span>
+          <span className="cursor-pointer">Health Devices</span>
+          <span className="cursor-pointer">Home Essentials</span>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden border-t">
+          <nav className="flex flex-col gap-2 p-4 text-sm">
+
+            {/* Original Routes Preserved */}
+            <NavLink to="/" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass}>
+              Home
+            </NavLink>
+            <NavLink to="/pharma40" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass}>
+              Pharma 4.0
+            </NavLink>
+            <NavLink to="/platform" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass}>
+              Platform
+            </NavLink>
+            <NavLink to="/service" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass}>
+              Services
+            </NavLink>
+            <NavLink to="/about" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass}>
+              About
+            </NavLink>
+            <NavLink to="/contact" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass}>
+              Contact
+            </NavLink>
+
+            <a href="http://localhost:8501" className="mt-3">
+              <button className="w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg">
+                Intelligent Disease Predictor
+              </button>
+            </a>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

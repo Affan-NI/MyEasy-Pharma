@@ -32,9 +32,23 @@ export function Navbar() {
                 alt="logo"
                 className="h-14 w-auto"
               />
-              <span className="font-semibold text-lg text-gray-900">
-                MyEasy Pharma
-              </span>
+                  <span
+                  className="
+                    font-extrabold 
+                    text-xl 
+                    tracking-wide 
+                    bg-gradient-to-r 
+                    from-emerald-600 
+                    via-green-500 
+                    to-lime-500 
+                    bg-clip-text 
+                    text-transparent
+                    drop-shadow-sm
+                  "
+                >
+                  MyEasy Pharma
+                </span>
+
             </div>
 
             <div className="hidden md:flex items-center gap-1 text-sm text-gray-600 cursor-pointer">

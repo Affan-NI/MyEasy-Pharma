@@ -125,7 +125,7 @@ export function Navbar() {
             </NavLink>
 
             <a href="http://localhost:8501" className="mt-3">
-              <button className="w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg">
+              <button className="w-full px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg">
                 Intelligent Disease Predictor
               </button>
             </a>

@@ -10,7 +10,7 @@ export function Footer() {
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
                 {/* <Pill className="w-6 h-6 text-white" /> */}
-                <img src="/images/Logo2.png" alt="logo" />
+                <img src="/images/Logo.png" alt="logo" />
               </div>
               <div>
                 <div className="text-lg font-semibold text-white">MyEasy Pharma</div>

@@ -46,6 +46,7 @@
             "react-router-dom": "^7.12.0",
             "recharts": "^2.15.2",
             "sonner": "^2.0.3",
+            "swiper": "^12.1.0",
             "tailwind-merge": "*",
             "three": "*",
             "vaul": "^1.1.2"

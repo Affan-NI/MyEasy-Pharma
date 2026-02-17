@@ -1,127 +1,231 @@
-import { Pill, ShoppingBag, Truck, Shield, Clock, Phone } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Heart, Users, Activity, Phone, Shield, Clock } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 export function PharmacyServices() {
+  const [open, setOpen] = useState(false);
+
   const services = [
     {
-      icon: Pill,
-      title: 'Prescription Medicines',
-      description: 'Quality prescription medications with pharmacist verification'
+      icon: Heart,
+      title: "Health Support",
+      description:
+        "Guidance for maintaining daily health and wellness and staying consistent."
     },
     {
-      icon: ShoppingBag,
-      title: 'Healthcare Products',
-      description: 'Diabetes care, supplements, and wellness products'
+      icon: Users,
+      title: "Chronic Care Support",
+      description:
+        "Support for diabetes, BP and long-term conditions with regular assistance."
     },
     {
-      icon: Truck,
-      title: 'Home Delivery',
-      description: 'Fast and safe delivery to your doorstep'
-    },
-    {
-      icon: Shield,
-      title: '100% Genuine',
-      description: 'Authentic medicines from verified manufacturers'
-    },
-    {
-      icon: Clock,
-      title: '24/7 Support',
-      description: 'Expert pharmacist guidance available anytime'
+      icon: Activity,
+      title: "Lifestyle Guidance",
+      description:
+        "Help with routine, sleep and healthy habits for better daily balance."
     },
     {
       icon: Phone,
-      title: 'Easy Ordering',
-      description: 'Order via app, web, or phone consultation'
+      title: "Quick Assistance",
+      description:
+        "Reach out anytime for help, queries or support from our team."
+    },
+    {
+      icon: Shield,
+      title: "Trusted Care",
+      description:
+        "Reliable support focused on safety, consistency and well-being."
+    },
+    {
+      icon: Clock,
+      title: "Always Available",
+      description:
+        "Support whenever you need guidance or help with your health routine."
     }
   ];
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-green-50 to-teal-50">
-      <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
+    <section
+      id="services"
+      className="py-16 bg-gradient-to-br from-green-50 to-teal-50"
+    >
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-5xl mx-auto">
+
           {/* Header */}
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
+          <motion.div
+            className="text-center mb-10"
+            initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 rounded-full mb-4">
-              <Pill className="w-4 h-4 text-green-600" />
-              <span className="text-sm text-green-600 font-semibold">Healthcare Services</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 rounded-full mb-3">
+              <Heart className="w-4 h-4 text-green-600" />
+              <span className="text-sm text-green-600 font-semibold">
+                Healthcare Services
+              </span>
             </div>
-            <h2 className="text-3xl md:text-4xl text-gray-900 mb-4">
-              Comprehensive Pharmacy & Healthcare Services
+
+            <h2 className="text-3xl md:text-4xl text-gray-900 mb-3 font-semibold">
+              Comprehensive Healthcare Support
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Trusted pharmacy services integrated with our AI-powered healthcare platform—
-              delivering quality medicines and continuous care support
+
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Continuous support, lifestyle guidance and assistance to help you
+              stay on track with your well-being.
             </p>
           </motion.div>
 
-          {/* Pharmacy Image */}
-          <motion.div 
-            className="mb-12 rounded-2xl overflow-hidden shadow-xl"
-            initial={{ opacity: 0, scale: 0.9 }}
+          {/* Image */}
+          <motion.div
+            className="mb-12 rounded-2xl overflow-hidden shadow-lg"
+            initial={{ opacity: 0, scale: 0.96 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
           >
-            <img 
-              // src={image_0ff7dd243794a79dff886211611c4758fc2577fb}
-              src='/images/0ff7dd243794a79dff886211611c4758fc2577fb.png'
-              alt="Pharmacy Medicines"
-              className="w-full h-[350px] object-cover"
+            <img
+              src="/images/0ff7dd243794a79dff886211611c4758fc2577fb.png"
+              alt="Healthcare"
+              className="w-full h-[260px] object-cover"
             />
           </motion.div>
 
-          {/* Services Grid */}
+          {/* Services */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {services.map((service, index) => {
               const Icon = service.icon;
+
               return (
-                <motion.div 
+                <motion.div
                   key={index}
-                  className="p-6 bg-white rounded-xl border border-green-200 hover:shadow-lg hover:border-green-400 transition-all group"
-                  initial={{ opacity: 0, y: 30 }}
+                  className="
+                  group bg-white rounded-2xl shadow-sm hover:shadow-2xl
+                  transition-all duration-500 ease-out p-5 text-center
+                  hover:-translate-y-1
+                  "
+                  initial={{ opacity: 0, y: 25 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  whileHover={{ y: -5 }}
+                  transition={{ delay: index * 0.05 }}
                 >
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-600 transition-colors">
-                    <Icon className="w-6 h-6 text-green-600 group-hover:text-white transition-colors" />
+                  <div className="
+                    w-12 h-12 mx-auto mb-3 rounded-full
+                    bg-gradient-to-r from-green-600 to-teal-600
+                    flex items-center justify-center
+                    transition-all duration-500 group-hover:scale-110
+                  ">
+                    <Icon className="text-white w-6 h-6" />
                   </div>
-                  <h3 className="text-lg text-gray-900 mb-2">{service.title}</h3>
-                  <p className="text-sm text-gray-600">{service.description}</p>
+
+                  <h3 className="text-sm font-semibold text-gray-900">
+                    {service.title}
+                  </h3>
+
+                  <div className="
+                    grid transition-all duration-500 ease-in-out
+                    [grid-template-rows:0fr]
+                    group-hover:[grid-template-rows:1fr]
+                  ">
+                    <div className="overflow-hidden">
+                      <p className="
+                        text-xs text-gray-600 mt-3
+                        opacity-0 translate-y-2
+                        group-hover:opacity-100 group-hover:translate-y-0
+                        transition-all duration-500 delay-100
+                      ">
+                        {service.description}
+                      </p>
+                    </div>
+                  </div>
                 </motion.div>
               );
             })}
           </div>
-
-          {/* Integration Message */}
-          <motion.div 
-            className="bg-gradient-to-r from-green-600 to-teal-600 rounded-2xl p-8 md:p-10 text-white text-center"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+          {/* CTA */}
+          <motion.div
+            className="
+            relative overflow-hidden
+            bg-gradient-to-r from-green-600 to-teal-600
+            rounded-2xl px-6 py-6
+            text-white text-center
+            shadow-lg
+            "
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
           >
-            <h3 className="text-2xl mb-4">Pharma 4.0 Meets Patient Care</h3>
-            <p className="text-lg leading-relaxed max-w-3xl mx-auto">
-              Our pharmacy services are seamlessly integrated with our AI-native platform, 
-              enabling <span className="font-semibold">personalised medication management, 
-              adherence tracking, and continuous health monitoring</span>—especially for chronic 
-              conditions like diabetes.
-            </p>
-            <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-6 py-3 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
-                Order Medicines
+
+            {/* glow */}
+            <div className="absolute -top-16 -left-16 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
+            <div className="absolute -bottom-16 -right-16 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
+
+            <div className="relative z-10">
+
+              {/* Title */}
+              <h3 className="text-lg md:text-xl font-semibold mb-1">
+                Need Health Support?
+              </h3>
+
+              <p className="text-sm opacity-90 mb-4">
+                We’re here to guide and support your health journey.
+              </p>
+
+               {/* buttons */}
+
+              <button className="
+                px-5 py-2 mr-5 rounded-full font-medium
+                bg-white text-green-700
+                hover:scale-105 transition text-sm
+              ">
+                Contact
               </button>
-              <button className="px-6 py-3 border-2 border-white text-white rounded-lg hover:bg-white/10 transition-colors font-semibold">
-                Upload Prescription
-              </button>
+
+             
+              {!open && (
+                <button
+                  onClick={() => setOpen(true)}
+                  className="
+                  px-5 py-2 rounded-full font-medium
+                  bg-white text-green-700
+                  hover:scale-105 transition text-sm
+                  "
+                >
+                  Learn More
+                </button>
+              )}
+
+              {/* EXPAND AREA */}
+              <motion.div
+                initial={false}
+                animate={{
+                  height: open ? "auto" : 0,
+                  opacity: open ? 1 : 0,
+                }}
+                transition={{ duration: 0.4 }}
+                className="overflow-hidden"
+              >
+                <div className="mt-4 border-t border-white/30 pt-4">
+
+                  <p className="text-sm leading-relaxed opacity-95 max-w-2xl mx-auto">
+                    Our platform provides continuous health support through lifestyle
+                    guidance, routine tracking and long-term care assistance. We help
+                    individuals stay consistent with their health goals by offering
+                    structured support, easy communication and reliable guidance.
+                    Whether it’s maintaining daily wellness or managing long-term
+                    conditions, our focus is to ensure users feel supported and
+                    confident in their health journey.
+                  </p>
+
+                  <button
+                    onClick={() => setOpen(false)}
+                    className="
+                    mt-4 px-5 py-2 rounded-full text-sm
+                    border border-white/70
+                    hover:bg-white/10 transition
+                    "
+                  >
+                    Learn Less
+                  </button>
+
+                </div>
+              </motion.div>
+
             </div>
           </motion.div>
         </div>

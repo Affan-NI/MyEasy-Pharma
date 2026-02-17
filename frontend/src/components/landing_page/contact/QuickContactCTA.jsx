@@ -1,28 +1,39 @@
-import { Phone, MessageCircle } from "lucide-react";
+import { Phone, MessageCircle, Mail } from "lucide-react";
 
 export default function QuickContactCTA() {
   return (
-    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-      
+    <div className="fixed top-44 right-4 z-50 flex flex-col gap-3">
+
       {/* WhatsApp */}
       <a
         href="https://wa.me/919350318639"
         target="_blank"
-        className="flex items-center gap-2 px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2 px-4 py-3 bg-green-500 text-white rounded-full shadow-lg hover:scale-110 hover:bg-green-600 transition"
       >
-        <MessageCircle size={20} />
-        WhatsApp Us
+        <MessageCircle size={18} />
+        <span className="hidden md:inline">WhatsApp</span>
       </a>
 
       {/* Call */}
       <a
         href="tel:+919350318639"
-        className="flex items-center gap-2 px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition"
+        className="flex items-center gap-2 px-7 py-3 bg-blue-600 text-white rounded-full shadow-lg hover:scale-110 transition"
       >
-        <Phone size={20} />
-        Call Us
+        <Phone size={18} />
+        <span className="hidden md:inline">Call</span>
+      </a>
+
+      {/* Email */}
+      <a
+        href="dfusalilchawla@gmail.com"
+        className="flex items-center gap-2 px-6 py-3 bg-red-500 text-white rounded-full shadow-lg hover:scale-110 hover:bg-red-600 transition"
+      >
+        <Mail size={18} />
+        <span className="hidden md:inline">Email</span>
       </a>
 
     </div>
   );
 }
+

@@ -1,222 +1,315 @@
-import { GraduationCap, Briefcase, Users, Globe } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 
+// import { GraduationCap, Briefcase, Users, Globe, ArrowRight } from "lucide-react";
+// import { motion } from "framer-motion";
+// import { Link } from "react-router-dom";
+
+// export function Founders() {
+//   return (
+//     <section className="py-16 bg-white">
+//       <div className="max-w-5xl mx-auto px-6">
+
+//         {/* heading */}
+//         <div className="text-center mb-10">
+//           <h2 className="text-3xl md:text-4xl text-gray-900 mb-3">
+//             Founders & Strategic Leadership
+//           </h2>
+//           <p className="text-gray-600 max-w-3xl mx-auto">
+//             Experienced leadership combining clinical research, strategic business direction,
+//             and long-term commitment to India's healthcare transformation.
+//           </p>
+//         </div>
+
+//         {/* founders */}
+//         <div className="grid md:grid-cols-2 gap-6 mb-10">
+
+//           {/* YC */}
+//           <div className="bg-gradient-to-br from-teal-50 to-blue-50 border rounded-2xl p-6">
+//             <div className="w-14 h-14 bg-teal-600 rounded-full flex items-center justify-center mx-auto mb-3">
+//               <span className="text-white font-bold">YC</span>
+//             </div>
+
+//             <h3 className="text-xl text-center font-semibold">Yejoor Chawla</h3>
+//             <p className="text-center text-teal-600 text-sm mb-4">Co-Founder</p>
+
+//             <div className="space-y-3 text-sm">
+//               <div className="flex gap-3">
+//                 <GraduationCap className="w-4 h-4 text-teal-600 mt-1" />
+//                 <div>
+//                   <div className="font-semibold">BITS Pilani</div>
+//                   <div className="text-gray-500">Undergraduate</div>
+//                 </div>
+//               </div>
+
+//               <div className="flex gap-3">
+//                 <GraduationCap className="w-4 h-4 text-indigo-600 mt-1" />
+//                 <div>
+//                   <div className="font-semibold">Master's in Clinical Research</div>
+//                   <div className="text-gray-500">Central Government Institute</div>
+//                 </div>
+//               </div>
+
+//               <p className="text-gray-600 pt-2 border-t">
+//                 Bridges AI innovation with medical science, ensuring clinical rigor in platform development.
+//               </p>
+//             </div>
+//           </div>
+
+//           {/* SC */}
+//           <div className="bg-gradient-to-br from-teal-50 to-blue-50 border rounded-2xl p-6">
+//             <div className="w-14 h-14 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-3">
+//               <span className="text-white font-bold">SC</span>
+//             </div>
+
+//             <h3 className="text-xl text-center font-semibold">Salil Chawla</h3>
+//             <p className="text-center text-indigo-600 text-sm mb-4">Co-Founder</p>
+
+//             <div className="space-y-3 text-sm">
+//               <div className="flex gap-3">
+//                 <GraduationCap className="w-4 h-4 text-indigo-600 mt-1" />
+//                 <div>
+//                   <div className="font-semibold">MBA, NMIMS</div>
+//                   <div className="text-gray-500">1988 Batch</div>
+//                 </div>
+//               </div>
+
+//               <div className="flex gap-3">
+//                 <Briefcase className="w-4 h-4 text-teal-600 mt-1" />
+//                 <div>
+//                   <div className="font-semibold">Strategic Leadership</div>
+//                   <div className="text-gray-500">Seasoned Business Executive</div>
+//                 </div>
+//               </div>
+
+//               <p className="text-gray-600 pt-2 border-t">
+//                 Brings decades of strategic leadership and entrepreneurial direction to the platform.
+//               </p>
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* mentorship */}
+//         <div className="bg-gradient-to-r from-teal-600 to-indigo-600 text-white rounded-2xl p-6 mb-10 text-center">
+//           <Users className="mx-auto mb-2" />
+//           <h3 className="text-xl mb-2">Mentorship Network</h3>
+//           <p className="text-sm max-w-3xl mx-auto">
+//             Guided by respected leaders across local and global healthcare ecosystems,
+//             reinforcing credibility, direction, and scale.
+//           </p>
+//         </div>
+
+//         {/* commitment */}
+//         <div className="bg-white border rounded-2xl p-6 mb-12">
+//           <div className="flex gap-4">
+//             <div className="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center">
+//               <Globe className="w-5 h-5 text-white" />
+//             </div>
+//             <div>
+//               <h3 className="text-xl mb-2">Long-Term Commitment</h3>
+//               <p className="text-gray-600">
+//                 Deep commitment to leaving a lasting micro- and macro-level impact on India's
+//                 healthcare landscape, guided by practical wisdom and global perspective.
+//               </p>
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* navigation cards */}
+//         <div className="grid md:grid-cols-3 gap-4">
+//           {[
+//             { to: "/platform", title: "Platform Overview" },
+//             { to: "/pharma40", title: "Pharma 4.0 Framework" },
+//             { to: "/contact", title: "Collaborate With Us" },
+//           ].map((l, i) => (
+//             <Link key={i} to={l.to}
+//               className="bg-white border rounded-xl p-5 hover:shadow-md transition"
+//             >
+//               <div className="flex justify-between items-center mb-2">
+//                 <h5 className="font-semibold text-sm">{l.title}</h5>
+//                 <ArrowRight className="w-4 h-4 text-teal-600" />
+//               </div>
+//               <p className="text-xs text-gray-500">
+//                 Explore further details and opportunities.
+//               </p>
+//             </Link>
+//           ))}
+//         </div>
+
+//       </div>
+//     </section>
+//   );
+// }
+
+
+import { GraduationCap, Briefcase, Users, Globe, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export function Founders() {
   return (
-    <section className="py-20 bg-gradient-to-br from-indigo-50 to-purple-50">
-      <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
-          {/* Header */}
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-3xl md:text-4xl text-gray-900 mb-4">
-              Founders, Mentorship & Vision
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Led by founders with deep expertise in clinical research and strategic leadership, 
-              guided by mentors across local and global healthcare ecosystems
-            </p>
-          </motion.div>
+    <section className="py-16 bg-white">
+      <div className="max-w-6xl mx-auto px-6">
 
-          {/* Founders */}
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {/* Founder 1 */}
-            <motion.div 
-              className="bg-white rounded-2xl p-8 border border-indigo-200 shadow-lg"
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              whileHover={{ scale: 1.02 }}
-            >
-              <div className="w-16 h-16 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl text-white font-bold">YC</span>
-              </div>
-              <h3 className="text-2xl text-gray-900 text-center mb-2">Yejoor Chawla</h3>
-              <p className="text-center text-indigo-600 mb-6">Co-Founder</p>
-              
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <GraduationCap className="w-5 h-5 text-indigo-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold text-gray-900">BITS Pilani</div>
-                    <div className="text-sm text-gray-600">Undergraduate</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <GraduationCap className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold text-gray-900">Master's in Clinical Research</div>
-                    <div className="text-sm text-gray-600">Central Government Institute</div>
-                  </div>
-                </div>
-                <div className="pt-3 border-t border-gray-200">
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    Bridges AI innovation with medical science, bringing clinical rigor to 
-                    technology development
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+        {/* heading */}
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl text-gray-900 mb-3">
+            Founders & Strategic Leadership
+          </h2>
+          <p className="text-gray-600 max-w-3xl mx-auto">
+            Experienced leadership combining clinical research, strategic business direction,
+            and long-term commitment to India's healthcare transformation.
+          </p>
+        </div>
 
-            {/* Founder 2 */}
-            <motion.div 
-              className="bg-white rounded-2xl p-8 border border-blue-200 shadow-lg"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              whileHover={{ scale: 1.02 }}
-            >
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl text-white font-bold">SC</span>
-              </div>
-              <h3 className="text-2xl text-gray-900 text-center mb-2">Salil Chawla</h3>
-              <p className="text-center text-blue-600 mb-6">Co-Founder</p>
-              
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <GraduationCap className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold text-gray-900">MBA, NMIMS</div>
-                    <div className="text-sm text-gray-600">1988 Batch</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Briefcase className="w-5 h-5 text-indigo-600 mt-1 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold text-gray-900">Strategic Leadership</div>
-                    <div className="text-sm text-gray-600">Seasoned Business Executive</div>
-                  </div>
-                </div>
-                <div className="pt-3 border-t border-gray-200">
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    Brings decades of strategic leadership, business acumen, and 
-                    entrepreneurial vision to the platform
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+        {/* founders */}
+        <div className="grid md:grid-cols-3 gap-6 mb-10">
+
+          {/* YC */}
+          <div className="bg-gradient-to-br from-teal-50 to-blue-50 border rounded-2xl p-6">
+  
+          <div className="w-30 h-30 rounded-full overflow-hidden mx-auto mb-4 border-4 border-white shadow">
+            <img
+              src="/images/founder.jpeg"
+              alt="Founder"
+              className="w-full h-full object-cover object-[50%_70%]"
+            />
           </div>
+            <h3 className="text-xl text-center font-semibold">Yejoor Chawla</h3>
+            <p className="text-center text-teal-600 text-sm mb-4">Co-Founder</p>
 
-          {/* Mentorship */}
-          <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 md:p-10 text-white mb-12">
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <Users className="w-8 h-8" />
-              <h3 className="text-2xl">Mentorship Network</h3>
-            </div>
-            <p className="text-lg text-center leading-relaxed max-w-4xl mx-auto mb-6">
-              The platform benefits from active mentorship by <span className="font-semibold">respected leaders across 
-              local and global healthcare ecosystems</span>, reinforcing credibility, direction, and scale.
-            </p>
-            <div className="grid md:grid-cols-3 gap-6 mt-8">
-              <div className="text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm">
-                <div className="text-3xl mb-2">🎯</div>
-                <div className="font-semibold mb-1">Strategic Guidance</div>
-                <div className="text-sm text-indigo-100">Business & market positioning</div>
+            <div className="space-y-3 text-sm">
+              <div className="flex gap-3">
+                <GraduationCap className="w-4 h-4 text-teal-600 mt-1" />
+                <div>
+                  <div className="font-semibold">BITS Pilani</div>
+                  <div className="text-gray-500">Undergraduate</div>
+                </div>
               </div>
-              <div className="text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm">
-                <div className="text-3xl mb-2">🏥</div>
-                <div className="font-semibold mb-1">Clinical Expertise</div>
-                <div className="text-sm text-indigo-100">Medical validation & insights</div>
-              </div>
-              <div className="text-center p-4 bg-white/10 rounded-lg backdrop-blur-sm">
-                <div className="text-3xl mb-2">🌍</div>
-                <div className="font-semibold mb-1">Global Perspective</div>
-                <div className="text-sm text-indigo-100">International collaboration</div>
-              </div>
-            </div>
-          </div>
 
-          {/* Commitment */}
-          <div className="bg-white rounded-2xl p-8 md:p-10 border border-gray-200 shadow-sm">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Globe className="w-6 h-6 text-white" />
+              <div className="flex gap-3">
+                <GraduationCap className="w-4 h-4 text-indigo-600 mt-1" />
+                <div>
+                  <div className="font-semibold">Master's in Clinical Research</div>
+                  <div className="text-gray-500">Central Government Institute</div>
+                </div>
               </div>
-              <div>
-                <h3 className="text-2xl text-gray-900 mb-4">Long-Term Commitment</h3>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  The founders are deeply committed to leaving a <span className="font-semibold text-gray-900">
-                  lasting micro- and macro-level impact</span> on India's healthcare landscape. 
-                  Supported by mentors who matter—both locally and globally—the platform is guided by 
-                  practical wisdom, regulatory awareness, and international perspective.
-                </p>
-              </div>
-            </div>
-          </div>
-          {/* Guided Cross Links */}
-          <div className="mt-16">
-            <div className="text-center mb-8">
-              <p className="text-sm uppercase tracking-wide text-gray-500">
-                Continue Exploring
+
+              <p className="text-gray-600 pt-2 border-t">
+                Bridges AI innovation with medical science, ensuring clinical rigor in platform development.
               </p>
-              <h4 className="text-2xl text-gray-900 mt-2">
-                Where would you like to go next?
-              </h4>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              
-              <Link
-                to="/platform"
-                className="group bg-white border border-gray-200 rounded-xl p-6 hover:border-indigo-300 hover:shadow-md transition"
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <h5 className="text-lg font-semibold text-gray-900">
-                    Platform Overview
-                  </h5>
-                  <ArrowRight className="w-5 h-5 text-indigo-600 group-hover:translate-x-1 transition" />
-                </div>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  See how our AI-native platform translates vision into real-world healthcare impact.
-                </p>
-              </Link>
-
-              <Link
-                to="/pharma40"
-                className="group bg-white border border-gray-200 rounded-xl p-6 hover:border-indigo-300 hover:shadow-md transition"
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <h5 className="text-lg font-semibold text-gray-900">
-                    Pharma 4.0 Framework
-                  </h5>
-                  <ArrowRight className="w-5 h-5 text-indigo-600 group-hover:translate-x-1 transition" />
-                </div>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  Understand the philosophy and systems shaping the future of healthcare.
-                </p>
-              </Link>
-
-              <Link
-                to="/contact"
-                className="group bg-white border border-gray-200 rounded-xl p-6 hover:border-indigo-300 hover:shadow-md transition"
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <h5 className="text-lg font-semibold text-gray-900">
-                    Collaborate With Us
-                  </h5>
-                  <ArrowRight className="w-5 h-5 text-indigo-600 group-hover:translate-x-1 transition" />
-                </div>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  Start a conversation to explore partnerships, pilots, or research collaboration.
-                </p>
-              </Link>
-
             </div>
           </div>
 
+          {/* SC */}
+          <div className="bg-gradient-to-br from-teal-50 to-blue-50 border rounded-2xl p-6">
+            <div className="w-30 h-30 rounded-full overflow-hidden mx-auto mb-4 border-4 border-white shadow">
+              {/* <span className="text-white font-bold text-lg">SC</span> */}
+              <img className="w-full h-full ml-0.5" src="/images/coFounder.jpeg" alt="" />
+            </div>
+
+            <h3 className="text-xl text-center font-semibold">Salil Chawla</h3>
+            <p className="text-center text-indigo-600 text-sm mb-4">Co-Founder</p>
+
+            <div className="space-y-3 text-sm">
+              <div className="flex gap-3">
+                <GraduationCap className="w-4 h-4 text-indigo-600 mt-1" />
+                <div>
+                  <div className="font-semibold">MBA, NMIMS</div>
+                  <div className="text-gray-500">1988 Batch</div>
+                </div>
+              </div>
+
+              <div className="flex gap-3">
+                <Briefcase className="w-4 h-4 text-teal-600 mt-1" />
+                <div>
+                  <div className="font-semibold">Strategic Leadership</div>
+                  <div className="text-gray-500">Seasoned Business Executive</div>
+                </div>
+              </div>
+
+              <p className="text-gray-600 pt-2 border-t">
+                Brings decades of strategic leadership and entrepreneurial direction to the platform.
+              </p>
+            </div>
+          </div>
+
+          {/* 🔥 NEW COLUMN */}
+          <div className="bg-gradient-to-br from-teal-50 to-blue-50 border rounded-2xl p-6">
+            <div className="w-30 h-30 rounded-full overflow-hidden mx-auto mb-4 border-4 border-white shadow">
+              {/* <span className="text-white font-bold text-lg">RC</span> */}
+              <img className="w-full h-full" src="/images/chiefMentor.jpeg" alt="" />
+            </div>
+
+            <h3 className="text-xl text-center font-semibold">Dr. Rajiv Chawla</h3>
+            <p className="text-center text-teal-700 text-sm mb-4">Chief Mentor</p>
+
+            <div className="space-y-3 text-sm">
+              <div className="flex gap-3">
+                <Briefcase className="w-4 h-4 text-teal-600 mt-1" />
+                <div>
+                  <div className="font-semibold">Renowned Diabetologist</div>
+                  <div className="text-gray-500">Founder, NDDCC</div>
+                </div>
+              </div>
+
+              <p className="text-gray-600 pt-2 border-t">
+                Provides strategic clinical mentorship and decades of experience in diabetes care,
+                guiding evidence-based and patient-centric innovation.
+              </p>
+            </div>
+          </div>
 
         </div>
+
+        {/* mentorship */}
+        <div className="bg-gradient-to-r from-teal-600 to-indigo-600 text-white rounded-2xl p-6 mb-10 text-center">
+          <Users className="mx-auto mb-2" />
+          <h3 className="text-xl mb-2">Mentorship Network</h3>
+          <p className="text-sm max-w-3xl mx-auto">
+            Guided by respected leaders across local and global healthcare ecosystems,
+            reinforcing credibility, direction, and scale.
+          </p>
+        </div>
+
+        {/* commitment */}
+        <div className="bg-white border rounded-2xl p-6 mb-12">
+          <div className="flex gap-4">
+            <div className="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center">
+              <Globe className="w-5 h-5 text-white" />
+            </div>
+            <div>
+              <h3 className="text-xl mb-2">Long-Term Commitment</h3>
+              <p className="text-gray-600">
+                Deep commitment to leaving a lasting micro- and macro-level impact on India's
+                healthcare landscape, guided by practical wisdom and global perspective.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* navigation */}
+        <div className="grid md:grid-cols-3 gap-4">
+          {[
+            { to: "/platform", title: "Platform Overview" },
+            { to: "/pharma40", title: "Pharma 4.0 Framework" },
+            { to: "/contact", title: "Collaborate With Us" },
+          ].map((l, i) => (
+            <Link key={i} to={l.to}
+              className="bg-white border rounded-xl p-5 hover:shadow-md transition"
+            >
+              <div className="flex justify-between items-center mb-2">
+                <h5 className="font-semibold text-sm">{l.title}</h5>
+                <ArrowRight className="w-4 h-4 text-teal-600" />
+              </div>
+              <p className="text-xs text-gray-500">
+                Explore further details and opportunities.
+              </p>
+            </Link>
+          ))}
+        </div>
+
       </div>
     </section>
   );
 }
+
+

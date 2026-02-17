@@ -68,7 +68,13 @@ export function Footer() {
               <li className="flex items-center gap-2 text-sm">
                 <Mail className="w-4 h-4 text-blue-400 flex-shrink-0" />
                 <a href="mailto:info@myeasypharma.com" className="hover:text-blue-400 transition-colors">
-                  contact@myeasypharma.com
+                  dfusalilchawla@gmail.com
+                </a>
+              </li>
+              <li className="flex items-center gap-2 text-sm">
+                <Mail className="w-4 h-4 text-blue-400 flex-shrink-0" />
+                <a href="mailto:info@myeasypharma.com" className="hover:text-blue-400 transition-colors">
+                  Yejoor.chawla@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2 text-sm">

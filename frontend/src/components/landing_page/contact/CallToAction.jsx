@@ -1,113 +1,274 @@
-import { ArrowRight, Users, Lightbulb, Heart, Sparkles } from 'lucide-react';
 
+
+// import { ArrowRight, Users, Lightbulb, Heart, Sparkles } from "lucide-react";
+// import { motion } from "framer-motion";
+
+// export function CallToAction({ onContactClick, onDemoClick }) {
+//   return (
+//     <section className="py-16 bg-gradient-to-br from-teal-50 to-blue-50 relative overflow-hidden">
+//       <div className="container mx-auto px-6 relative">
+//         <div className="max-w-5xl mx-auto">
+
+//           {/* Badge */}
+//           <div className="flex justify-center mb-6">
+//             <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-100 rounded-full">
+//               <Sparkles className="w-4 h-4 text-teal-600" />
+//               <span className="text-sm text-teal-700 font-semibold">
+//                 Join the Transformation
+//               </span>
+//             </div>
+//           </div>
+
+//           {/* Heading */}
+//           <h2 className="text-3xl md:text-4xl text-center mb-4 text-gray-900 leading-tight">
+//             Co-Create the Pharma 4.0 Future
+//           </h2>
+
+//           <p className="text-lg text-center mb-8 text-gray-600 max-w-3xl mx-auto leading-relaxed">
+//             Making measurable impact at micro and macro levels in a globalised healthcare world 
+//             built on shared vision, pooled resources, and collective wisdom
+//           </p>
+
+          {/* Core Values */}
+          // <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 max-w-4xl mx-auto">
+          //   {[
+          //     { icon: Lightbulb, label: "Learn" },
+          //     { icon: ArrowRight, label: "Integrate" },
+          //     { icon: Users, label: "Collaborate" },
+          //     { icon: Heart, label: "Transform" },
+          //   ].map((item, i) => (
+          //     <div
+          //       key={i}
+          //       className="bg-white rounded-xl border border-gray-200 p-4 text-center shadow-sm"
+          //     >
+          //       <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mx-auto mb-2">
+          //         <item.icon className="w-6 h-6 text-teal-600" />
+          //       </div>
+          //       <div className="text-base font-semibold text-gray-800">
+          //         {item.label}
+          //       </div>
+          //     </div>
+          //   ))}
+          // </div>
+
+//           {/* Invite Section */}
+//           <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 md:p-8 mb-10">
+//             <h3 className="text-2xl text-center mb-6 text-gray-900">
+//               Who Can Collaborate
+//             </h3>
+
+//             <div className="max-w-3xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+
+//               {[
+//                 {
+//                   title: "Doctors & Clinicians",
+//                   desc: "AI-assisted longitudinal patient insights between visits."
+//                 },
+//                 {
+//                   title: "Pharma & Research",
+//                   desc: "Real-world evidence and therapy performance intelligence."
+//                 },
+//                 {
+//                   title: "Hospitals & Clinics",
+//                   desc: "Interoperable systems via secure APIs and unified records."
+//                 },
+//                 {
+//                   title: "Payers & Policymakers",
+//                   desc: "Outcome-driven population health analytics and insights."
+//                 },
+//                 {
+//                   title: "Patients",
+//                   desc: "Personalised, preventive and continuous care journeys."
+//                 },
+//               ].map((item, i) => (
+//                 <div
+//                   key={i}
+//                   className="group rounded-xl border bg-teal-50 hover:bg-white transition p-4 cursor-pointer"
+//                 >
+//                   {/* title */}
+//                   <div className="font-semibold text-gray-900 text-sm">
+//                     {i + 1}. {item.title}
+//                   </div>
+
+//                   {/* hover content */}
+//                   <div className="text-xs text-gray-600 mt-2 max-h-0 overflow-hidden 
+//                                   group-hover:max-h-20 transition-all duration-300">
+//                     {item.desc}
+//                   </div>
+//                 </div>
+//               ))}
+
+//             </div>
+//           </div>
+
+//           {/* Buttons */}
+//           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+//             <motion.button
+//               onClick={onContactClick}
+//               className="px-7 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-colors flex items-center gap-2 font-semibold shadow-md"
+//               whileHover={{ scale: 1.05 }}
+//               whileTap={{ scale: 0.95 }}
+//             >
+//               Get in Touch
+//               <ArrowRight className="w-4 h-4" />
+//             </motion.button>
+
+//             <motion.button
+//               onClick={onDemoClick}
+//               className="px-7 py-3 border border-blue-600 text-blue-600 rounded-xl hover:bg-blue-600/10 font-semibold"
+//               whileHover={{ scale: 1.05 }}
+//               whileTap={{ scale: 0.95 }}
+//             >
+//               Schedule a Demo
+//             </motion.button>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+
+import { ArrowRight, Users, Lightbulb, Heart, Sparkles } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function CallToAction({ onContactClick, onDemoClick }) {
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-10 right-20 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-3xl opacity-10 animate-pulse"></div>
-        <div className="absolute bottom-10 left-20 w-64 h-64 bg-white rounded-full mix-blend-overlay filter blur-3xl opacity-10 animate-pulse delay-1000"></div>
-      </div>
+    <section className="py-16 bg-gradient-to-br from-teal-50 to-blue-50 relative overflow-hidden">
 
-      <div className="container mx-auto px-6 relative">
-        <div className="max-w-5xl mx-auto">
-          {/* Badge */}
-          <div className="flex justify-center mb-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full">
-              <Sparkles className="w-4 h-4" />
-              <span className="text-sm">Join the Transformation</span>
-            </div>
+      {/* glow background */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-teal-100 via-white to-indigo-100 blur-3xl opacity-60"/>
+
+      <div className="max-w-5xl mx-auto px-6">
+
+        {/* badge */}
+        <div className="flex justify-center mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-100 rounded-full">
+            <Sparkles className="w-4 h-4 text-teal-600" />
+            <span className="text-sm text-teal-700 font-semibold">
+              Join the Transformation
+            </span>
           </div>
-
-          {/* Main Heading */}
-          <h2 className="text-3xl md:text-5xl text-center mb-6 leading-tight">
-            Co-Create the Pharma 4.0 Future
-          </h2>
-          
-          <p className="text-xl text-center mb-8 text-blue-100 max-w-3xl mx-auto leading-relaxed">
-            Making measurable impact at micro and macro levels in a globalised healthcare world 
-            built on shared vision, pooled resources, and collective wisdom
-          </p>
-
-          {/* Core Values */}
-          <div className="grid md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-3">
-                <Lightbulb className="w-8 h-8" />
-              </div>
-              <div className="text-lg font-semibold">Learn</div>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-3">
-                <ArrowRight className="w-8 h-8" />
-              </div>
-              <div className="text-lg font-semibold">Integrate</div>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-3">
-                <Users className="w-8 h-8" />
-              </div>
-              <div className="text-lg font-semibold">Collaborate</div>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-3">
-                <Heart className="w-8 h-8" />
-              </div>
-              <div className="text-lg font-semibold">Transform</div>
-            </div>
-          </div>
-
-          {/* Who We Invite */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-10 mb-10 border border-white/20">
-            <h3 className="text-2xl text-center mb-6">We Invite</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4 text-center">
-              <div className="p-4 bg-white/10 rounded-lg backdrop-blur-sm">
-                <div className="font-semibold mb-1">Clinicians</div>
-                <div className="text-sm text-blue-100">Healthcare Providers</div>
-              </div>
-              <div className="p-4 bg-white/10 rounded-lg backdrop-blur-sm">
-                <div className="font-semibold mb-1">Pharma Leaders</div>
-                <div className="text-sm text-blue-100">Industry Executives</div>
-              </div>
-              <div className="p-4 bg-white/10 rounded-lg backdrop-blur-sm">
-                <div className="font-semibold mb-1">Innovators</div>
-                <div className="text-sm text-blue-100">Tech Entrepreneurs</div>
-              </div>
-              <div className="p-4 bg-white/10 rounded-lg backdrop-blur-sm">
-                <div className="font-semibold mb-1">Researchers</div>
-                <div className="text-sm text-blue-100">Academic Institutions</div>
-              </div>
-              <div className="p-4 bg-white/10 rounded-lg backdrop-blur-sm">
-                <div className="font-semibold mb-1">Partners</div>
-                <div className="text-sm text-blue-100">Ecosystem Builders</div>
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button onClick={onContactClick}
-                aria-label="Get in touch with our team" className="w-full sm:w-auto px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all flex items-center justify-center gap-2 group text-lg font-semibold shadow-lg">
-              <span>Get in Touch</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button onClick={onDemoClick}
-                aria-label="Schedule a product demo" className="w-full sm:w-auto px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white/10 transition-all text-lg font-semibold">
-              Schedule a Demo
-            </button>
-          </div>
-
-          {/* Tagline */}
-          {/* <div className="mt-12 text-center">
-            <p className="text-2xl font-semibold tracking-wide">
-              Learn. Integrate. Collaborate. Transform.
-            </p>
-          </div> */}
         </div>
+
+        {/* heading */}
+        <h2 className="text-3xl md:text-4xl text-center mb-4 text-gray-900">
+          Co-Create the Pharma 4.0 Future
+        </h2>
+
+        <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
+          Building measurable healthcare impact through shared intelligence,
+          collaboration, and next-generation digital infrastructure.
+        </p>
+
+        {/* CORE STEPS */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 max-w-3xl mx-auto">
+            {[
+              { icon: Lightbulb, label: "Learn" },
+              { icon: ArrowRight, label: "Integrate" },
+              { icon: Users, label: "Collaborate" },
+              { icon: Heart, label: "Transform" },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-xl border border-gray-200 p-3 text-center shadow-sm"
+              >
+                <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mx-auto mb-1.5">
+                  <item.icon className="w-4 h-4 text-teal-600" />
+                </div>
+                <div className="text-base font-semibold text-gray-800">
+                  {item.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        {/* <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 md:p-8 mb-10"> */}
+             <h3 className="text-3xl font-extrabold text-center mb-6 text-gray-900">
+               We invite
+             </h3>
+
+        {/* 🔥 PREMIUM HOVER CARDS */}
+        <div className="max-w-3xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+
+          {[
+            {
+              title: "Doctors & Clinicians",
+              desc: "AI-driven patient timelines and decision support between visits.",
+              icon: "🩺"
+            },
+            {
+              title: "Pharma & Research",
+              desc: "Real-world therapy insights and outcome intelligence.",
+              icon: "💊"
+            },
+            {
+              title: "Hospitals & Clinics",
+              desc: "Secure interoperable systems and unified patient records.",
+              icon: "🏥"
+            },
+            {
+              title: "Payers & Policymakers",
+              desc: "Population-level outcome analytics and risk insights.",
+              icon: "📊"
+            },
+            {
+              title: "Patients",
+              desc: "Preventive, personalised and continuous care journeys.",
+              icon: "❤️"
+            },
+            {
+            title: "Innovators",
+            desc: "Co-create AI, IoT and digital therapeutics to advance Pharma 4.0 care models.",
+            icon: "🚀"
+            }
+
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="group relative bg-white rounded-xl border p-4 hover:shadow-lg transition cursor-pointer"
+            >
+              <div className="flex items-center gap-2 font-semibold text-gray-900 text-sm">
+                <span className="text-lg">{item.icon}</span>
+                {item.title}
+              </div>
+
+              {/* hover content */}
+              <div className="text-xs text-gray-600 mt-2 opacity-0 max-h-0 overflow-hidden
+                              group-hover:opacity-100 group-hover:max-h-20
+                              transition-all duration-300">
+                {item.desc}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* BUTTONS */}
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
+
+          <motion.button
+            onClick={onContactClick}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="px-7 py-3 bg-blue-600 text-white rounded-xl font-semibold shadow-md flex items-center gap-2"
+          >
+            Get in Touch
+            <ArrowRight className="w-4 h-4"/>
+          </motion.button>
+
+          {/* <motion.button
+            onClick={onDemoClick}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="px-7 py-3 border border-blue-600 text-blue-600 rounded-xl font-semibold"
+          >
+            Schedule Demo
+          </motion.button> */}
+
+        </div>
+
       </div>
     </section>
   );
 }
 
-//  ye mere project ka ak component h means ye file h src ke ander component folder me landing_page folder ke ander contact folder ke ander CallToAction file h ab ye sirf UI h pr mujhe isme functionalities add krni h Jaise isme two button h get in touch and schecule a demo h to isme functionalities add krni h lekin saprate file bnake to mujhe step by step btao kya kya krna h kaise kaise krna h
+

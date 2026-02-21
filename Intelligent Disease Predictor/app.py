@@ -138,7 +138,7 @@ with st.sidebar:
     }
     </style>
     
-    <a href="http://localhost:3000/" target="_blank" class="custom-button">
+    <a href="https://myeasypharma.vercel.app/" target="_self" class="custom-button">
         GO TO HOME PAGE
     </a>
     """, unsafe_allow_html=True)

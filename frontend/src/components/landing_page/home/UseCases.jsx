@@ -44,79 +44,93 @@ export function UseCases() {
   ];
 
   return (
-    <section className="py-10 relative">
-      <div className="container mx-auto px-24 relative">
+    <section className="py-10 md:py-12 relative">
+      <div className="container mx-auto px-4 md:px-12 lg:px-20">
 
         {/* Header */}
-        <div className="mb-6">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-700 mb-3">
+        <div className="mb-6 md:mb-8">
+          <h2 className="text-xl md:text-3xl font-bold text-gray-700">
             Real-World Use Cases Across Stakeholders
           </h2>
         </div>
 
-        {/* Custom Arrows */}
-        <div className="swiper-button-prev-custom absolute left-22 
-        top-[190px] -translate-x-1/2 z-20
-        w-14 h-12 bg-white border shadow-md rounded-md
-        flex items-center justify-center cursor-pointer hover:bg-gray-100 transition">
-          <ChevronLeft size={22} className="text-blue-600" />
-        </div>
+        <div className="relative">
 
-        <div className="swiper-button-next-custom absolute right-22 
-        top-[180px] translate-x-1/2 z-20
-        w-14 h-12 bg-white border shadow-md rounded-md
-        flex items-center justify-center cursor-pointer hover:bg-gray-100 transition">
-          <ChevronRight size={22} className="text-blue-600" />
-        </div>
+          {/* Left Arrow */}
+          <div
+  className="swiper-button-prev-custom absolute 
+             -left-4 md:-left-6   /* negative on mobile also */
+             top-1/2 -translate-y-1/2 
+             z-20
+             w-8 h-8 md:w-12 md:h-12
+             bg-white border shadow-md rounded-md
+             flex items-center justify-center 
+             cursor-pointer hover:bg-gray-100 transition"
+>
+  <ChevronLeft size={16} className="md:w-5 md:h-5 text-blue-600" />
+</div>
 
-        {/* Swiper */}
-        <Swiper
-          modules={[Navigation]}
-          navigation={{
-            nextEl: ".swiper-button-next-custom",
-            prevEl: ".swiper-button-prev-custom",
-          }}
-          spaceBetween={20}
-          slidesPerView={4}
-          loop={false}
-          breakpoints={{
-            0: { slidesPerView: 1.2 },
-            640: { slidesPerView: 2.2 },
-            1024: { slidesPerView: 4 },
-          }}
-        >
-          {useCases.map((item, index) => (
-            <SwiperSlide key={index} className="h-auto">
-              <div
-                onClick={() =>
-                  navigate("/commingSoon", { state: item.stakeholder })
-                }
-                className="h-full flex flex-col justify-between
-                bg-white rounded-xl border p-4
-                hover:shadow-md hover:border-blue-300 transition-all cursor-pointer"
-              >
-                {/* Smaller Image */}
-                <div className="h-32 flex items-center justify-center">
-                  <img
-                    src={item.image}
-                    alt={item.stakeholder}
-                    className="max-h-full object-contain"
-                  />
+          <div
+  className="swiper-button-next-custom absolute 
+             -right-4 md:-right-6   /* negative on mobile also */
+             top-1/2 -translate-y-1/2 
+             z-20
+             w-8 h-8 md:w-12 md:h-12
+             bg-white border shadow-md rounded-md
+             flex items-center justify-center 
+             cursor-pointer hover:bg-gray-100 transition"
+>
+  <ChevronRight size={16} className="md:w-5 md:h-5 text-blue-600" />
+</div>
+
+          <Swiper
+            modules={[Navigation]}
+            navigation={{
+              nextEl: ".swiper-button-next-custom",
+              prevEl: ".swiper-button-prev-custom",
+            }}
+            spaceBetween={12}
+            breakpoints={{
+              0: { slidesPerView: 2 },
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 4 },
+            }}
+          >
+            {useCases.map((item, index) => (
+              <SwiperSlide key={index}>
+                <div
+                  onClick={() =>
+                    navigate("/commingSoon", { state: item.stakeholder })
+                  }
+                  className="flex flex-col justify-between
+                             bg-white rounded-xl border
+                             p-3 md:p-4        /* smaller padding mobile */
+                             hover:shadow-md hover:border-blue-300 
+                             transition-all cursor-pointer"
+                >
+                  {/* Image (Smaller on Mobile) */}
+                  <div className="h-20 md:h-32 flex items-center justify-center">
+                    <img
+                      src={item.image}
+                      alt={item.stakeholder}
+                      className="max-h-full object-contain"
+                    />
+                  </div>
+
+                  <div className="mt-3 md:mt-4 text-center">
+                    <h3 className="text-sm md:text-lg text-gray-900 mb-1">
+                      {item.stakeholder}
+                    </h3>
+                    <p className="text-xs md:text-sm text-gray-500 min-h-[36px]">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-                <div className="mt-4 text-center">
-                  <h3 className="text-lg text-gray-900 mb-1">
-                    {item.stakeholder}
-                  </h3>
-                  <p className="text-sm text-gray-500 min-h-[40px]">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-
+        </div>
       </div>
     </section>
   );

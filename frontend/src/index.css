@@ -1,4 +1,13 @@
-/*! tailwindcss v4.1.3 | MIT License | https://tailwindcss.com */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+} 
+
+/* 
 @layer properties {
   @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
     *, :before, :after, ::backdrop {
@@ -2784,3 +2793,5 @@ html {
     opacity: .5;
   }
 }
+
+*/

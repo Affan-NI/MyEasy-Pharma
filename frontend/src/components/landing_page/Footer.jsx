@@ -35,12 +35,13 @@ export function Footer() {
 
           {/* Platform */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Platform</h3>
+            <h3 className="text-white font-semibold mb-4">Know Us</h3>
             <ul className="space-y-2">
-              <li><a href="#pharma40" className="text-sm hover:text-blue-400 transition-colors">Pharma 4.0</a></li>
-              <li><a href="#platform" className="text-sm hover:text-blue-400 transition-colors">SaaS Ecosystem</a></li>
-              <li><a href="#services" className="text-sm hover:text-blue-400 transition-colors">Healthcare Services</a></li>
-              <li><a href="#about" className="text-sm hover:text-blue-400 transition-colors">About Us</a></li>
+              <li><a href="/about" className="text-sm hover:text-blue-400 transition-colors">About Us</a></li>
+              <li><a href="/contact" className="text-sm hover:text-blue-400 transition-colors">Contact Us</a></li>
+              <li><a href="/pharma40" className="text-sm hover:text-blue-400 transition-colors">Pharma 4.0</a></li>
+              <li><a href="platform" className="text-sm hover:text-blue-400 transition-colors">SaaS Ecosystem</a></li>
+              <li><a href="/service" className="text-sm hover:text-blue-400 transition-colors">Services</a></li>
             </ul>
           </div>
 

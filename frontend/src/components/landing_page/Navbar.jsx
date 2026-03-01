@@ -60,10 +60,10 @@ export function Navbar() {
           <div className="flex items-center gap-4">
             {/* <ShoppingCart className="cursor-pointer text-gray-700" /> */}
 
-            <button className="hidden md:flex items-center gap-1 border px-3 py-1 rounded-md text-sm">
+            {/* <button className="hidden md:flex items-center gap-1 border px-3 py-1 rounded-md text-sm">
               <User size={16} />
               Login
-            </button>
+            </button> */}
 
             <a href="http://localhost:8501">
               <button className="hidden md:block px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-sm rounded-lg">
@@ -94,22 +94,62 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Category Bar  */}
-      <div className="bg-[#0f3f3a] hidden lg:block">
-        <div className="container mx-auto px-6 h-11 flex items-center gap-6 text-white text-sm overflow-x-auto">
-          <NavLink to="/commingsoon" state="Products" className="cursor-pointer">Products</NavLink>
-          <NavLink to="/commingsoon" state="Nutrition" className="cursor-pointer">Nutrition</NavLink>
-          <NavLink to="/commingsoon" state="Women Care" className="cursor-pointer">Women Care</NavLink>
-          <NavLink to="/commingsoon" state="Diabetes Care" className="cursor-pointer">Diabetes Care</NavLink>
-          <NavLink to="/commingsoon" state="Heart Car" className="cursor-pointer">Heart Care</NavLink>
-          <NavLink to="/commingsoon" state="Doctors & Clinicians" className="cursor-pointer">Doctors & Clinicians</NavLink>
-          <NavLink to="/commingsoon" state="Pharma & Research" className="cursor-pointer">Pharma & Research</NavLink>
-          <NavLink to="/commingsoon" state="Diet Plan" className="cursor-pointer">Diet Plan</NavLink>
-          <NavLink to="/commingsoon" state="Care Coordinators" className="cursor-pointer">Care Coordinators</NavLink>
-          {/* <span className="cursor-pointer">Health Devices</span> */}
-          {/* <span className="cursor-pointer">Home Essentials</span> */}
-        </div>
-      </div>
+ {/* Category Bar */}
+<div className="relative bg-[#0f3f3a]">
+
+  {/* Left Fade */}
+  <div className="pointer-events-none absolute left-0 top-0 h-full w-8 bg-gradient-to-r from-[#0f3f3a] to-transparent z-10" />
+
+  {/* Right Fade */}
+  <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-[#0f3f3a] to-transparent z-10" />
+
+  {/* Scrollable Content */}
+  <div
+    className="
+      container
+      mx-auto
+      px-4
+      h-11
+      flex
+      items-center
+      gap-6
+      text-white
+      text-sm
+      overflow-x-auto
+      whitespace-nowrap
+      scroll-smooth
+      scrollbar-hide
+    "
+  >
+    <NavLink to="/commingsoon" state="Products" className="flex-shrink-0 hover:text-green-300 transition">
+      Products
+    </NavLink>
+    <NavLink to="/commingsoon" state="Nutrition" className="flex-shrink-0 hover:text-green-300 transition">
+      Nutrition
+    </NavLink>
+    <NavLink to="/commingsoon" state="Women Care" className="flex-shrink-0 hover:text-green-300 transition">
+      Women Care
+    </NavLink>
+    <NavLink to="/commingsoon" state="Diabetes Care" className="flex-shrink-0 hover:text-green-300 transition">
+      Diabetes Care
+    </NavLink>
+    <NavLink to="/commingsoon" state="Heart Car" className="flex-shrink-0 hover:text-green-300 transition">
+      Heart Care
+    </NavLink>
+    <NavLink to="/commingsoon" state="Doctors & Clinicians" className="flex-shrink-0 hover:text-green-300 transition">
+      Doctors & Clinicians
+    </NavLink>
+    <NavLink to="/commingsoon" state="Pharma & Research" className="flex-shrink-0 hover:text-green-300 transition">
+      Pharma & Research
+    </NavLink>
+    <NavLink to="/commingsoon" state="Diet Plan" className="flex-shrink-0 hover:text-green-300 transition">
+      Diet Plan
+    </NavLink>
+    <NavLink to="/commingsoon" state="Care Coordinators" className="flex-shrink-0 hover:text-green-300 transition">
+      Care Coordinators
+    </NavLink>
+  </div>
+</div>
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (

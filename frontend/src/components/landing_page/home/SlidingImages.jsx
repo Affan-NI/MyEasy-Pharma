@@ -38,93 +38,110 @@ export function SlidingImages() {
   const navigate = useNavigate();
 
   return (
-    <section className="py-16 bg-white relative">
-      <div className="container mx-auto px-24 relative">
+    <section className="py-12 md:py-16 bg-white relative">
+      <div className="container mx-auto px-4 md:px-12 lg:px-20">
 
         {/* Section Heading */}
-        <div className="mb-10">
-          <h2 className="text-3xl md:text-3xl font-bold text-gray-700">
+        <div className="mb-8 md:mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-700">
             Care That Transforms Lives
           </h2>
-          <p className="text-gray-500 mt-3 text-sm md:text-base">
+          <p className="text-gray-500 mt-2 text-sm md:text-base max-w-xl">
             Comprehensive care designed to improve lives through innovation.
           </p>
         </div>
 
-        {/* Custom Navigation Buttons */}
-        <div className="swiper-button-prev-custom absolute left-16 top-[230px] -translate-y-1/2 z-10 
-                        w-12 h-12 bg-gray-800 text-white rounded-full 
-                        flex items-center justify-center cursor-pointer shadow-lg">
-          <ChevronLeft size={24} />
-        </div>
+        <div className="relative">
 
-        <div className="swiper-button-next-custom absolute right-16 top-[230px] -translate-y-1/2 z-10 
-                        w-12 h-12 bg-gray-800 text-white rounded-full 
-                        flex items-center justify-center cursor-pointer shadow-lg">
-          <ChevronRight size={24} />
-        </div>
+          {/* Left Arrow (Hidden on Mobile) */}
+          <div
+            className="hidden md:flex swiper-button-prev-custom absolute 
+                       md:-left-6 
+                       top-1/2 -translate-y-1/2 
+                       z-10 
+                       w-12 h-12 
+                       bg-gray-800 text-white rounded-full 
+                       items-center justify-center 
+                       cursor-pointer shadow-lg"
+          >
+            <ChevronLeft size={22} />
+          </div>
 
-        {/* Swiper Slider */}
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          navigation={{
-            nextEl: ".swiper-button-next-custom",
-            prevEl: ".swiper-button-prev-custom",
-          }}
-          pagination={{ clickable: true }}
-          autoplay={{
-            delay: 3000, // 3 seconds
-            disableOnInteraction: false,
-          }}
-          speed={1000}
-          spaceBetween={20}
-          loop
-          breakpoints={{
-            0: { slidesPerView: 1 },
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-        >
-          {banners.map((item, i) => (
-            <SwiperSlide key={i}>
-              <div
-                onClick={() => navigate(item.link)}
-                className="relative rounded-2xl overflow-hidden shadow-lg cursor-pointer group"
-              >
-                {/* Image */}
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="w-full h-[230px] object-cover group-hover:scale-105 transition duration-500"
-                />
+          {/* Right Arrow (Hidden on Mobile) */}
+          <div
+            className="hidden md:flex swiper-button-next-custom absolute 
+                       md:-right-6 
+                       top-1/2 -translate-y-1/2 
+                       z-10 
+                       w-12 h-12 
+                       bg-gray-800 text-white rounded-full 
+                       items-center justify-center 
+                       cursor-pointer shadow-lg"
+          >
+            <ChevronRight size={22} />
+          </div>
 
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            navigation={{
+              nextEl: ".swiper-button-next-custom",
+              prevEl: ".swiper-button-prev-custom",
+            }}
+            pagination={{ clickable: true }}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            speed={1000}
+            spaceBetween={20}
+            loop
+            breakpoints={{
+              0: { slidesPerView: 1 },
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+          >
+            {banners.map((item, i) => (
+              <SwiperSlide key={i}>
+                <div
+                  onClick={() => navigate(item.link)}
+                  className="relative rounded-2xl overflow-hidden shadow-lg cursor-pointer group"
+                >
+                  {/* Image */}
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-[220px] md:h-[260px] object-cover group-hover:scale-105 transition duration-500"
+                  />
 
-                {/* Text Content */}
-                <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-lg font-semibold">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm opacity-90">
-                    {item.desc}
-                  </p>
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
 
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      navigate(item.link);
-                    }}
-                    className="mt-3 bg-[#F05A28] hover:bg-[#e14f20] px-4 py-2 rounded-lg text-sm font-medium"
-                  >
-                    Learn More
-                  </button>
+                  {/* Text Content */}
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <h3 className="text-base md:text-lg font-semibold">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs md:text-sm opacity-90">
+                      {item.desc}
+                    </p>
+
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        navigate(item.link);
+                      }}
+                      className="mt-3 bg-[#F05A28] hover:bg-[#e14f20] px-4 py-2 rounded-lg text-xs md:text-sm font-medium"
+                    >
+                      Learn More
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
+        </div>
       </div>
     </section>
   );

@@ -102,7 +102,7 @@ export function WhyChooseUs() {
 
         {/* Header */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-semibold text-gray-900 mb-2">
+          <h2 className="text-3xl font-bold text-gray-900 mb-2">
             Why Choose Us
           </h2>
           <p className="text-gray-600">

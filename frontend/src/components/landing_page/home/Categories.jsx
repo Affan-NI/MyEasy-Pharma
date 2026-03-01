@@ -39,38 +39,46 @@ export function Categories() {
   ];
 
   return (
-    <section id="medicines" className="py-8">
-      <div className="container mx-auto px-24">
+    <section id="medicines" className="py-10 md:py-14">
+      <div className="container mx-auto px-4 md:px-12 lg:px-20">
 
-        <div className="mb-6">
-          <h2 className="text-3xl md:text-3xl font-bold text-gray-700 mb-3">
+        {/* Heading */}
+        <div className="mb-6 md:mb-8">
+          <h2 className="text-xl md:text-3xl font-bold text-gray-700">
             Popular Medicine Categories
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {categories.map((category, index) => (
             <div
               key={index}
-              className="group p-6 bg-white border border-gray-200 rounded-xl hover:shadow-lg hover:border-blue-300 transition-all cursor-pointer"
+              className="group p-4 md:p-6 bg-white border border-gray-200 
+                         rounded-xl hover:shadow-lg hover:border-blue-300 
+                         transition-all cursor-pointer"
             >
-              <div className="flex items-center gap-4">
-                
+              <div className="flex items-center gap-3 md:gap-4">
+
+                {/* Icon Box */}
                 <div
-                  className={`w-20 h-20 ${category.bgColor} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform`}
+                  className={`w-14 h-14 md:w-20 md:h-20 ${category.bgColor} 
+                              rounded-lg flex items-center justify-center 
+                              group-hover:scale-110 transition-transform`}
                 >
                   <img
                     src={category.image}
                     alt={category.name}
-                    className="w-50 h-50 object-contain"
+                    className="w-10 h-10 md:w-14 md:h-14 object-contain"
                   />
                 </div>
 
+                {/* Text */}
                 <div>
-                  <h3 className="text-lg text-gray-900 mb-1">
+                  <h3 className="text-base md:text-lg text-gray-900 mb-1">
                     {category.name}
                   </h3>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-xs md:text-sm text-gray-500">
                     {category.products}
                   </p>
                 </div>

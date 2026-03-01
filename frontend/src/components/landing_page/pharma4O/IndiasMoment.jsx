@@ -1,123 +1,244 @@
-import { TrendingUp, Database, Zap, Globe } from 'lucide-react';
-import { motion } from 'framer-motion';
+// import { TrendingUp, Database, Zap, Globe } from "lucide-react";
+// import { motion } from "framer-motion";
+
+// export function IndiasMoment() {
+//   return (
+//     <section className="py-14 bg-green-10">
+//       <div className="max-w-6xl mx-auto px-4">
+
+//         {/* Header */}
+//         <motion.div
+//           className="text-center mb-8"
+//           initial={{ opacity: 0, y: 25 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//         >
+//           <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-2">
+//             Why This Matters Now
+//           </h2>
+
+//           <p className="text-sm text-gray-600 max-w-xl mx-auto">
+//             Rising chronic conditions, digital adoption and connected systems
+//             are reshaping how healthcare can be delivered and coordinated.
+//           </p>
+//         </motion.div>
+
+//         {/* Comparison */}
+//         <div className="grid md:grid-cols-2 gap-5 mb-8">
+
+//           {/* Legacy */}
+//           <div className="p-5 bg-white rounded-xl border border-gray-200">
+//             <div className="text-xs text-gray-500 mb-1">Traditional</div>
+//             <h3 className="text-lg font-semibold text-gray-900 mb-2">
+//               Legacy Systems
+//             </h3>
+
+//             <ul className="space-y-1 text-xs text-gray-600">
+//               <li>✕ Isolated data</li>
+//               <li>✕ Reactive care</li>
+//               <li>✕ Limited insights</li>
+//             </ul>
+//           </div>
+
+//           {/* Modern */}
+//           <div className="
+//             p-5 rounded-xl
+//             bg-gradient-to-br from-green-100 to-teal-100
+//             border border-green-300 shadow-sm
+//           ">
+//             <div className="text-xs text-green-700 mb-1">Modern</div>
+//             <h3 className="text-lg font-semibold text-gray-900 mb-2">
+//               Connected Systems
+//             </h3>
+
+//             <ul className="space-y-1 text-xs text-gray-700">
+//               <li>✓ Connected ecosystem</li>
+//               <li>✓ Real-time insights</li>
+//               <li>✓ Proactive care</li>
+//             </ul>
+//           </div>
+//         </div>
+
+//         {/* Impact */}
+//         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+//           {[
+//             { icon: TrendingUp, title: "Continuous Care" },
+//             { icon: Database, title: "Real Data" },
+//             { icon: Zap, title: "Faster Insights" },
+//             { icon: Globe, title: "Digital Shift" },
+//           ].map((item, i) => {
+//             const Icon = item.icon;
+//             return (
+//               <div
+//                 key={i}
+//                 className="bg-white rounded-xl p-4 border border-gray-200 text-center"
+//               >
+//                 <div className="w-10 h-10 mx-auto mb-2 rounded-lg bg-gradient-to-r from-green-600 to-teal-600 flex items-center justify-center">
+//                   <Icon className="w-4 h-4 text-white" />
+//                 </div>
+
+//                 <h4 className="text-xs font-semibold text-gray-800">
+//                   {item.title}
+//                 </h4>
+//               </div>
+//             );
+//           })}
+//         </div>
+
+//       </div>
+//     </section>
+//   );
+// }
+
+import { TrendingUp, Database, Zap, Globe } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function IndiasMoment() {
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
-          {/* Header */}
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+    <section className="py-16 bg-gradient-to-b from-green-50 to-white">
+      <div className="max-w-6xl mx-auto px-4">
+
+        {/* HEADER */}
+        <motion.div
+          className="text-center mb-10"
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
+          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-3">
+            Why This Moment Matters
+          </h2>
+
+          <p className="text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Rising chronic conditions, fragmented data and growing digital
+            adoption are reshaping healthcare. The shift now is from storing
+            information to generating meaningful, connected insights that
+            support continuous care.
+          </p>
+        </motion.div>
+
+        {/* COMPARISON */}
+        <div className="grid md:grid-cols-2 gap-6 mb-10">
+
+          {/* OLD */}
+          <motion.div
+            className="
+            bg-white rounded-xl p-6 border border-gray-200
+            shadow-sm hover:shadow-md transition
+            "
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
           >
-            <h2 className="text-3xl md:text-4xl text-gray-900 mb-4">
-              India's Moment: Why Pharma 4.0 Matters Now
-            </h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              India is at a critical inflection point—rising chronic disease burden (notably diabetes), 
-              fragmented data silos, and accelerating digital adoption.
-            </p>
+            <div className="text-xs text-gray-500 mb-1">Traditional</div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">
+              Fragmented Systems
+            </h3>
+
+            <ul className="space-y-2 text-sm text-gray-600">
+              <li>• Data stored but not connected</li>
+              <li>• Insights arrive too late</li>
+              <li>• Care remains reactive</li>
+            </ul>
           </motion.div>
 
-          {/* Image Section */}
-          <motion.div 
-            className="mb-12 rounded-2xl overflow-hidden shadow-xl"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
+          {/* NEW */}
+          <motion.div
+            className="
+            relative overflow-hidden
+            rounded-xl p-6
+            bg-gradient-to-br from-green-100 to-teal-100
+            border border-green-300
+            shadow
+            "
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
           >
-            <img 
-              src="https://images.unsplash.com/photo-1758691463626-0ab959babe00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBtZWRpY2FsJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3Njc3NzA5NzJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
-              alt="Medical Technology"
-              className="w-full h-[350px] object-cover"
-            />
+            {/* glow */}
+            <div className="absolute -top-10 -right-10 w-32 h-32 bg-white/30 blur-2xl rounded-full"></div>
+
+            <div className="text-xs text-green-700 mb-1">Emerging Model</div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">
+              Connected Intelligence
+            </h3>
+
+            <ul className="space-y-2 text-sm text-gray-700">
+              <li>• Interconnected data ecosystem</li>
+              <li>• Real-time awareness</li>
+              <li>• Proactive care decisions</li>
+            </ul>
           </motion.div>
-
-          {/* Comparison */}
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
-            {/* Legacy Systems */}
-            <div className="p-8 bg-white rounded-xl border-2 border-gray-300">
-              <div className="text-sm text-gray-500 mb-2">Traditional Approach</div>
-              <h3 className="text-2xl text-gray-900 mb-4">Legacy Systems</h3>
-              <p className="text-gray-600 mb-4">Digitize records and store information</p>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2 text-sm text-gray-600">
-                  <span className="text-red-500 mt-1">✕</span>
-                  <span>Isolated data silos</span>
-                </li>
-                <li className="flex items-start gap-2 text-sm text-gray-600">
-                  <span className="text-red-500 mt-1">✕</span>
-                  <span>No actionable insights</span>
-                </li>
-                <li className="flex items-start gap-2 text-sm text-gray-600">
-                  <span className="text-red-500 mt-1">✕</span>
-                  <span>Reactive healthcare</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Pharma 4.0 */}
-            <div className="p-8 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border-2 border-blue-400 shadow-lg">
-              <div className="text-sm text-blue-600 mb-2">Modern Approach</div>
-              <h3 className="text-2xl text-gray-900 mb-4">Pharma 4.0 Systems</h3>
-              <p className="text-gray-600 mb-4">Generate intelligence and enable action</p>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2 text-sm text-gray-600">
-                  <span className="text-green-500 mt-1">✓</span>
-                  <span>Interconnected ecosystem</span>
-                </li>
-                <li className="flex items-start gap-2 text-sm text-gray-600">
-                  <span className="text-green-500 mt-1">✓</span>
-                  <span>Real-time insights</span>
-                </li>
-                <li className="flex items-start gap-2 text-sm text-gray-600">
-                  <span className="text-green-500 mt-1">✓</span>
-                  <span>Proactive care</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Impact Areas */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center p-6 bg-white rounded-xl border border-gray-200">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-6 h-6 text-blue-600" />
-              </div>
-              <h4 className="text-lg text-gray-900 mb-2">Continuous Care</h4>
-              <p className="text-sm text-gray-600">Beyond episodic treatment</p>
-            </div>
-
-            <div className="text-center p-6 bg-white rounded-xl border border-gray-200">
-              <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Database className="w-6 h-6 text-indigo-600" />
-              </div>
-              <h4 className="text-lg text-gray-900 mb-2">Real-World Evidence</h4>
-              <p className="text-sm text-gray-600">Faster clinical insights</p>
-            </div>
-
-            <div className="text-center p-6 bg-white rounded-xl border border-gray-200">
-              <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-6 h-6 text-teal-600" />
-              </div>
-              <h4 className="text-lg text-gray-900 mb-2">Regulatory Readiness</h4>
-              <p className="text-sm text-gray-600">Aligned with ABDM</p>
-            </div>
-
-            <div className="text-center p-6 bg-white rounded-xl border border-gray-200">
-              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-6 h-6 text-purple-600" />
-              </div>
-              <h4 className="text-lg text-gray-900 mb-2">Innovation Hub</h4>
-              <p className="text-sm text-gray-600">Global leadership position</p>
-            </div>
-          </div>
         </div>
+
+        {/* IMPACT CARDS */}
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-5">
+          {[
+            {
+              icon: TrendingUp,
+              title: "Continuous Care",
+              desc: "Beyond episodic visits",
+            },
+            {
+              icon: Database,
+              title: "Real Data",
+              desc: "Better decision support",
+            },
+            {
+              icon: Zap,
+              title: "Faster Signals",
+              desc: "Early risk awareness",
+            },
+            {
+              icon: Globe,
+              title: "Digital Shift",
+              desc: "Connected care systems",
+            },
+          ].map((item, i) => {
+            const Icon = item.icon;
+
+            return (
+              <motion.div
+                key={i}
+                className="
+                group text-center bg-white
+                rounded-xl p-5 border border-gray-200
+                shadow-sm hover:shadow-md
+                transition-all
+                "
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.05 }}
+              >
+                <div className="
+                  w-11 h-11 mx-auto mb-2
+                  bg-gradient-to-r from-green-600 to-teal-600
+                  rounded-lg flex items-center justify-center
+                  group-hover:scale-105 transition
+                ">
+                  <Icon className="w-5 h-5 text-white" />
+                </div>
+
+                <h4 className="text-sm font-semibold text-gray-900">
+                  {item.title}
+                </h4>
+                <p className="text-xs text-gray-600">{item.desc}</p>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* BOTTOM LINE */}
+        <motion.div
+          className="mt-10 text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+        >
+          <div className="
+            inline-block px-6 py-3 rounded-full
+            bg-gradient-to-r from-green-600 to-teal-600
+            text-white text-sm shadow
+          ">
+            Moving from digital records → to meaningful, connected care
+          </div>
+        </motion.div>
+
       </div>
     </section>
   );

@@ -1,9 +1,13 @@
 import { Heart, Users, Activity, Phone, Shield, Clock } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 export function PharmacyServices() {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+
 
   const services = [
     {
@@ -65,7 +69,7 @@ export function PharmacyServices() {
               </span>
             </div>
 
-            <h2 className="text-3xl md:text-4xl text-gray-900 mb-3 font-semibold">
+            <h2 className="text-3xl md:text-4xl text-gray-900 mb-3 font-bold">
               Comprehensive Healthcare Support
             </h2>
 
@@ -168,15 +172,17 @@ export function PharmacyServices() {
 
                {/* buttons */}
 
-              <button className="
+              <button
+                onClick={() => navigate("/contact")}
+                className="
                 px-5 py-2 mr-5 rounded-full font-medium
                 bg-white text-green-700
                 hover:scale-105 transition text-sm
-              ">
+              "
+              >
                 Contact
               </button>
 
-             
               {!open && (
                 <button
                   onClick={() => setOpen(true)}

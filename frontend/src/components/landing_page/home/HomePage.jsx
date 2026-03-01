@@ -13,11 +13,11 @@ function HomePage() {
         <>
            <Hero/>
            <SlidingImages/>
-           <AINative />
            <UseCases />
+           <Categories/>
+           <AINative /> 
            <Simplification />
-           <NextGen />
-           <Categories/> 
+           <NextGen />  
         </>
      );
 }

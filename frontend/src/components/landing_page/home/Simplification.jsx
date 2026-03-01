@@ -3,9 +3,8 @@ import { motion } from 'framer-motion';
 
 export function Simplification() {
   return (
-    <section className="py-20 bg-gradient-to-br from-teal-50 to-blue-50">
-      <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
+    <section className="py-5">
+        <div className="container mx-auto px-24">
           {/* Header */}
           <motion.div 
             className="text-center mb-12"
@@ -14,11 +13,7 @@ export function Simplification() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-100 rounded-full mb-4">
-              <Lightbulb className="w-4 h-4 text-teal-600" />
-              <span className="text-sm text-teal-600 font-semibold">Knowledge Transfer</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-3xl font-bold text-gray-700 mb-3">
               Simplification as a Service
             </h2>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -78,18 +73,18 @@ export function Simplification() {
           {/* Activities */}
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: Users, title: "Structured Interactions", desc: "Engaging directly with healthcare and pharma trade professionals", color: "teal" },
-              { icon: BookOpen, title: "Knowledge Sessions", desc: "Practical training on Pharma 4.0 concepts and applications", color: "blue" },
-              { icon: ArrowRight, title: "Platform-Led Insights", desc: "Real-world demonstrations of technology in action", color: "indigo" }
+              { icon: Users, title: "Structured Interactions", desc: "Engaging directly with healthcare and pharma trade professionals", color: "indigo" },
+              { icon: BookOpen, title: "Knowledge Sessions", desc: "Practical training on Pharma 4.0 concepts and applications", color: "indigo" },
+              { icon: ArrowRight, title: "Practical Implementation", desc: "Turning complex concepts into practical, real-world implementation paths.", color: "indigo" }
             ].map((activity, index) => (
               <motion.div 
                 key={index}
-                className={`bg-white p-6 rounded-xl border border-${activity.color}-200`}
+                className={`bg-white p-6 rounded-xl border`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
+                // whileHover={{ y: -5 }}
               >
                 <div className={`w-12 h-12 bg-${activity.color}-100 rounded-lg flex items-center justify-center mb-4`}>
                   <activity.icon className={`w-6 h-6 text-${activity.color}-600`} />
@@ -99,19 +94,7 @@ export function Simplification() {
               </motion.div>
             ))}
           </div>
-
-          {/* Outcome */}
-          <div className="mt-12 text-center">
-            <div className="inline-block bg-white px-8 py-6 rounded-2xl border-2 border-teal-300 shadow-md max-w-3xl">
-              <p className="text-lg text-gray-700 leading-relaxed">
-                <span className="font-semibold text-teal-600">Result:</span> This service-led approach ensures 
-                that innovation is inclusive, usable, and scalable—enabling stakeholders to move from 
-                awareness to action with confidence.
-              </p>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
   );
 }

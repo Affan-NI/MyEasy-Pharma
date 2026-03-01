@@ -39,11 +39,11 @@ export function SlidingImages() {
 
   return (
     <section className="py-16 bg-white relative">
-      <div className="container mx-auto px-6 relative">
+      <div className="container mx-auto px-24 relative">
 
         {/* Section Heading */}
-        <div className="mb-10 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+        <div className="mb-10">
+          <h2 className="text-3xl md:text-3xl font-bold text-gray-700">
             Care That Transforms Lives
           </h2>
           <p className="text-gray-500 mt-3 text-sm md:text-base">
@@ -52,13 +52,13 @@ export function SlidingImages() {
         </div>
 
         {/* Custom Navigation Buttons */}
-        <div className="swiper-button-prev-custom absolute left-0 top-1/2 -translate-y-1/2 z-10 
+        <div className="swiper-button-prev-custom absolute left-16 top-[230px] -translate-y-1/2 z-10 
                         w-12 h-12 bg-gray-800 text-white rounded-full 
                         flex items-center justify-center cursor-pointer shadow-lg">
           <ChevronLeft size={24} />
         </div>
 
-        <div className="swiper-button-next-custom absolute right-0 top-1/2 -translate-y-1/2 z-10 
+        <div className="swiper-button-next-custom absolute right-16 top-[230px] -translate-y-1/2 z-10 
                         w-12 h-12 bg-gray-800 text-white rounded-full 
                         flex items-center justify-center cursor-pointer shadow-lg">
           <ChevronRight size={24} />

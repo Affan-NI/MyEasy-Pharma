@@ -51,23 +51,21 @@ export function Navbar() {
 
             </div>
 
-            <div className="hidden md:flex items-center gap-1 text-sm text-gray-600 cursor-pointer">
-              {/* <MapPin size={16} />
-              <span>Select Address</span> */}
+            {/* <div className="hidden md:flex items-center gap-1 text-sm text-gray-600 cursor-pointer">
               <Addres />
-            </div>
+            </div> */}
           </div>
 
           {/* Right Icons + CTA */}
           <div className="flex items-center gap-4">
-            <ShoppingCart className="cursor-pointer text-gray-700" />
+            {/* <ShoppingCart className="cursor-pointer text-gray-700" /> */}
 
             <button className="hidden md:flex items-center gap-1 border px-3 py-1 rounded-md text-sm">
               <User size={16} />
               Login
             </button>
 
-            <a href="http://localhost:8501">
+            <a href="https://myeasypharma.onrender.com">
               <button className="hidden md:block px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-sm rounded-lg">
                 Intelligent Disease Predictor
               </button>
@@ -138,7 +136,7 @@ export function Navbar() {
               Contact
             </NavLink>
 
-            <a href="http://localhost:8501" className="mt-3">
+            <a href="https://myeasypharma.onrender.com" className="mt-3">
               <button className="w-full px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg">
                 Intelligent Disease Predictor
               </button>

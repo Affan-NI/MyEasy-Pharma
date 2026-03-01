@@ -151,7 +151,7 @@ export function Founders() {
 
         {/* heading */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl text-gray-900 mb-3">
+          <h2 className="text-3xl md:text-4xl text-gray-900 mb-3 font-bold">
             Founders & Strategic Leadership
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto">

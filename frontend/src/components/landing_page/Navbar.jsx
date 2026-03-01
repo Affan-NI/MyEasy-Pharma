@@ -65,7 +65,7 @@ export function Navbar() {
               Login
             </button> */}
 
-            <a href="http://localhost:8501">
+            <a href="https://myeasypharma.onrender.com">
               <button className="hidden md:block px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white text-sm rounded-lg">
                 Intelligent Disease Predictor
               </button>
@@ -176,7 +176,7 @@ export function Navbar() {
               Contact
             </NavLink>
 
-            <a href="http://localhost:8501" className="mt-3">
+            <a href="https://myeasypharma.onrender.com" className="mt-3">
               <button className="w-full px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg">
                 Intelligent Disease Predictor
               </button>

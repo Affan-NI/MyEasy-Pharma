@@ -33,7 +33,7 @@ export function AboutUs() {
             <Building2 className="w-4 h-4 text-teal-600" />
             <span className="text-sm text-teal-700 font-semibold">Our Story</span>
           </div>
-          <h2 className="text-3xl md:text-4xl text-gray-900">
+          <h2 className="text-3xl md:text-4xl text-gray-900 font-bold">
             About MyEasy Pharma Pvt Ltd
           </h2>
         </div>
@@ -160,7 +160,7 @@ export function AboutUs() {
 
             {/* heading */}
             <div className="text-center mb-6">
-              <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-1">
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-1">
                 Our Presence
               </h3>
               <p className="text-gray-500 text-xs">

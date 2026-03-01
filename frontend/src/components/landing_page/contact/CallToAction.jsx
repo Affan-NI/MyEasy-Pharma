@@ -152,7 +152,7 @@ export function CallToAction({ onContactClick, onDemoClick }) {
         </div>
 
         {/* heading */}
-        <h2 className="text-3xl md:text-4xl text-center mb-4 text-gray-900">
+        <h2 className="text-3xl md:text-4xl text-center mb-4 text-gray-900 font-bold">
           Co-Create the Pharma 4.0 Future
         </h2>
 

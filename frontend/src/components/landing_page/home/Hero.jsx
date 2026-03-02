@@ -11,16 +11,11 @@ export function Hero() {
 
   return (
     <section id="home" className="relative bg-gradient-to-br">
-      <div className="w-full px-6 relative">
-        <div className="max-w-6xl mx-auto">
-
-          <motion.div
+       <motion.div
             className="
               relative 
               mb-8
-              w-screen
-              left-1/2
-              -translate-x-1/2
+              w-full
               overflow-hidden
               shadow-[0_20px_60px_rgba(0,0,0,0.15)]
               bg-gradient-to-b 
@@ -59,6 +54,10 @@ export function Hero() {
               </div>
             </div>
           </motion.div>
+      <div className="w-full px-6 relative">
+        <div className="max-w-6xl mx-auto">
+
+         
 
 <motion.div
   className="

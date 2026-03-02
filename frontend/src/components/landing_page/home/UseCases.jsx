@@ -46,7 +46,6 @@ export function UseCases() {
   return (
     <section className="py-10 md:py-12 relative">
       <div className="w-full px-4 md:px-12 lg:px-20">
-
         <div className="mb-6 md:mb-8">
           <h2 className="text-xl md:text-3xl font-bold text-gray-700">
             Real-World Use Cases Across Stakeholders
@@ -54,9 +53,8 @@ export function UseCases() {
         </div>
 
         <div className="relative">
-
           <div
-  className="swiper-button-prev-custom absolute 
+            className="swiper-button-prev-custom absolute 
              -left-4 md:-left-6   /* negative on mobile also */
              top-1/2 -translate-y-1/2 
              z-20
@@ -64,12 +62,12 @@ export function UseCases() {
              bg-white border shadow-md rounded-md
              flex items-center justify-center 
              cursor-pointer hover:bg-gray-100 transition"
->
-  <ChevronLeft size={16} className="md:w-5 md:h-5 text-blue-600" />
-</div>
+          >
+            <ChevronLeft size={16} className="md:w-5 md:h-5 text-blue-600" />
+          </div>
 
           <div
-  className="swiper-button-next-custom absolute 
+            className="swiper-button-next-custom absolute 
              -right-4 md:-right-6   /* negative on mobile also */
              top-1/2 -translate-y-1/2 
              z-20
@@ -77,9 +75,9 @@ export function UseCases() {
              bg-white border shadow-md rounded-md
              flex items-center justify-center 
              cursor-pointer hover:bg-gray-100 transition"
->
-  <ChevronRight size={16} className="md:w-5 md:h-5 text-blue-600" />
-</div>
+          >
+            <ChevronRight size={16} className="md:w-5 md:h-5 text-blue-600" />
+          </div>
 
           <Swiper
             modules={[Navigation]}
@@ -126,7 +124,6 @@ export function UseCases() {
               </SwiperSlide>
             ))}
           </Swiper>
-
         </div>
       </div>
     </section>

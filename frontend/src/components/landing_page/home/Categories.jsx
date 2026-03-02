@@ -4,44 +4,43 @@ export function Categories() {
       image: "/images/MedicineCategories/diabetes.png",
       name: "Diabetes Care",
       products: "200+ Products",
-      bgColor: "bg-green-50"
+      bgColor: "bg-green-50",
     },
     {
       image: "/images/MedicineCategories/heart.png",
       name: "Heart Care",
       products: "150+ Products",
-      bgColor: "bg-green-50"
+      bgColor: "bg-green-50",
     },
     {
       image: "/images/MedicineCategories/pain.png",
       name: "Pain Relief",
       products: "180+ Products",
-      bgColor: "bg-green-50"
+      bgColor: "bg-green-50",
     },
     {
       image: "/images/MedicineCategories/vitamins.png",
       name: "Vitamins & Supplements",
       products: "300+ Products",
-      bgColor: "bg-green-50"
+      bgColor: "bg-green-50",
     },
     {
       image: "/images/MedicineCategories/cold.png",
       name: "Cold & Flu",
       products: "120+ Products",
-      bgColor: "bg-green-50"
+      bgColor: "bg-green-50",
     },
     {
       image: "/images/MedicineCategories/firstaid.png",
       name: "First Aid",
       products: "80+ Products",
-      bgColor: "bg-green-50"
-    }
+      bgColor: "bg-green-50",
+    },
   ];
 
   return (
     <section id="medicines" className="py-10 md:py-14">
       <div className="w-full px-4 md:px-12 lg:px-20">
-
         <div className="mb-6 md:mb-8">
           <h2 className="text-xl md:text-3xl font-bold text-gray-700">
             Popular Medicine Categories
@@ -57,7 +56,6 @@ export function Categories() {
                          transition-all cursor-pointer"
             >
               <div className="flex items-center gap-3 md:gap-4">
-
                 <div
                   className={`w-14 h-14 md:w-20 md:h-20 ${category.bgColor} 
                               rounded-lg flex items-center justify-center 
@@ -78,7 +76,6 @@ export function Categories() {
                     {category.products}
                   </p>
                 </div>
-
               </div>
             </div>
           ))}

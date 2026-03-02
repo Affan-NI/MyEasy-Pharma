@@ -14,15 +14,12 @@ const MyEasyPharmaText = () => {
       if (!isDeleting && charIndex < mainTitle.length) {
         setDisplayText(mainTitle.substring(0, charIndex + 1));
         setCharIndex(charIndex + 1);
-      } 
-      else if (isDeleting && charIndex > 0) {
+      } else if (isDeleting && charIndex > 0) {
         setDisplayText(mainTitle.substring(0, charIndex - 1));
         setCharIndex(charIndex - 1);
-      } 
-      else if (!isDeleting && charIndex === mainTitle.length) {
+      } else if (!isDeleting && charIndex === mainTitle.length) {
         setTimeout(() => setIsDeleting(true), 2000);
-      } 
-      else if (isDeleting && charIndex === 0) {
+      } else if (isDeleting && charIndex === 0) {
         setIsDeleting(false);
       }
     }, speed);

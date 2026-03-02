@@ -40,7 +40,6 @@ export function SlidingImages() {
   return (
     <section className="py-12 md:py-16 bg-white relative">
       <div className="w-full px-4 md:px-12 lg:px-20">
-
         <div className="mb-8 md:mb-10">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-700">
             Care That Transforms Lives
@@ -51,7 +50,6 @@ export function SlidingImages() {
         </div>
 
         <div className="relative">
-
           <div
             className="hidden md:flex swiper-button-prev-custom absolute 
                        md:-left-6 
@@ -116,9 +114,7 @@ export function SlidingImages() {
                     <h3 className="text-base md:text-lg font-semibold">
                       {item.title}
                     </h3>
-                    <p className="text-xs md:text-sm opacity-90">
-                      {item.desc}
-                    </p>
+                    <p className="text-xs md:text-sm opacity-90">{item.desc}</p>
 
                     <button
                       onClick={(e) => {
@@ -134,7 +130,6 @@ export function SlidingImages() {
               </SwiperSlide>
             ))}
           </Swiper>
-
         </div>
       </div>
     </section>

@@ -3,16 +3,27 @@ import { motion } from "framer-motion";
 
 export function NextGen() {
   const team = [
-    { icon: Code, title: "Technologists", desc: "Building scalable AI systems" },
-    { icon: Microscope, title: "Clinicians", desc: "Ensuring clinical validity" },
-    { icon: BarChart, title: "Researchers", desc: "Advancing healthcare science" },
+    {
+      icon: Code,
+      title: "Technologists",
+      desc: "Building scalable AI systems",
+    },
+    {
+      icon: Microscope,
+      title: "Clinicians",
+      desc: "Ensuring clinical validity",
+    },
+    {
+      icon: BarChart,
+      title: "Researchers",
+      desc: "Advancing healthcare science",
+    },
     { icon: BarChart, title: "Analysts", desc: "Extracting data insights" },
   ];
 
   return (
     <section className="py-10 md:py-16 bg-white">
       <div className="w-full px-4 md:px-12 lg:px-20">
-
         <motion.div
           className="text-center mb-8 md:mb-12"
           initial={{ opacity: 0, y: 30 }}
@@ -26,8 +37,8 @@ export function NextGen() {
 
           <p className="text-sm md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             At the heart of our ecosystem is a growing network of young,
-            enthusiastic professionals curating and refining the platform
-            for India's healthcare domain.
+            enthusiastic professionals curating and refining the platform for
+            India's healthcare domain.
           </p>
         </motion.div>
 
@@ -50,9 +61,7 @@ export function NextGen() {
                 {member.title}
               </h3>
 
-              <p className="text-xs md:text-sm text-gray-600">
-                {member.desc}
-              </p>
+              <p className="text-xs md:text-sm text-gray-600">{member.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -81,7 +90,6 @@ export function NextGen() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-
           <div className="p-5 md:p-8 bg-gray-50 rounded-xl border border-gray-200">
             <h4 className="text-lg md:text-xl text-gray-900 mb-4">
               Building for Today
@@ -123,9 +131,7 @@ export function NextGen() {
               </li>
             </ul>
           </div>
-
         </div>
-
       </div>
     </section>
   );

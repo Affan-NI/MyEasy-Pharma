@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import * as THREE from 'three';
+import React, { useEffect, useRef, useState } from "react";
+import * as THREE from "three";
 
 const App = () => {
   const mountRef = useRef(null);
@@ -13,7 +13,7 @@ const App = () => {
       35,
       window.innerWidth / window.innerHeight,
       0.1,
-      1000
+      1000,
     );
     camera.position.z = 54;
 
@@ -28,15 +28,15 @@ const App = () => {
     scene.add(helixGroup);
 
     const createHighIntensityTexture = () => {
-      const canvas = document.createElement('canvas');
+      const canvas = document.createElement("canvas");
       canvas.width = 128;
       canvas.height = 128;
-      const ctx = canvas.getContext('2d');
+      const ctx = canvas.getContext("2d");
       const grad = ctx.createRadialGradient(64, 64, 0, 64, 64, 64);
-      grad.addColorStop(0, 'rgba(255,255,255,1)');
-      grad.addColorStop(0.2, 'rgba(59,130,246,0.95)');
-      grad.addColorStop(0.5, 'rgba(99,102,241,0.5)');
-      grad.addColorStop(1, 'rgba(0,0,0,0)');
+      grad.addColorStop(0, "rgba(255,255,255,1)");
+      grad.addColorStop(0.2, "rgba(59,130,246,0.95)");
+      grad.addColorStop(0.5, "rgba(99,102,241,0.5)");
+      grad.addColorStop(1, "rgba(0,0,0,0)");
       ctx.fillStyle = grad;
       ctx.fillRect(0, 0, 128, 128);
       return new THREE.CanvasTexture(canvas);
@@ -75,8 +75,11 @@ const App = () => {
         }
       }
 
-      geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-      geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+      geometry.setAttribute(
+        "position",
+        new THREE.BufferAttribute(positions, 3),
+      );
+      geometry.setAttribute("color", new THREE.BufferAttribute(colors, 3));
 
       const material = new THREE.PointsMaterial({
         size: pSize,
@@ -114,7 +117,7 @@ const App = () => {
           posArr[j * 3 + 2] = z1 + (z2 - z1) * lt;
         }
 
-        geo.setAttribute('position', new THREE.BufferAttribute(posArr, 3));
+        geo.setAttribute("position", new THREE.BufferAttribute(posArr, 3));
 
         const mat = new THREE.PointsMaterial({
           size: 0.22,
@@ -180,10 +183,10 @@ const App = () => {
       renderer.setSize(window.innerWidth, window.innerHeight);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
       cancelAnimationFrame(frameId);
       mountRef.current?.removeChild(renderer.domElement);
     };

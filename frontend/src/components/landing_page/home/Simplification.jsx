@@ -23,7 +23,6 @@ export function Simplification() {
   return (
     <section className="py-10 md:py-16">
       <div className="w-full px-4 md:px-12 lg:px-20">
-
         <motion.div
           className="text-center mb-8 md:mb-12"
           initial={{ opacity: 0, y: 30 }}
@@ -39,14 +38,14 @@ export function Simplification() {
             Technology adoption fails when complexity overwhelms stakeholders.
             Beyond our platform, we help healthcare and pharmaceutical trade
             <span className="font-semibold">
-              {" "}decode and unpack Pharma 4.0
+              {" "}
+              decode and unpack Pharma 4.0
             </span>{" "}
             in the simplest, most practical manner.
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
-
           <motion.div
             className="bg-white p-5 md:p-8 rounded-2xl border border-gray-200 shadow-sm"
             initial={{ opacity: 0, x: -30 }}
@@ -63,12 +62,14 @@ export function Simplification() {
 
             <p className="text-sm md:text-base text-gray-600 mb-4 leading-relaxed">
               Advanced concepts like AI-driven analytics and interoperability
-              can seem abstract and inaccessible to enterprises and institutions.
+              can seem abstract and inaccessible to enterprises and
+              institutions.
             </p>
 
             <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-              Without practical understanding, transformative technologies remain
-              unutilized—creating a gap between innovation potential and adoption.
+              Without practical understanding, transformative technologies
+              remain unutilized—creating a gap between innovation potential and
+              adoption.
             </p>
           </motion.div>
 
@@ -88,14 +89,14 @@ export function Simplification() {
 
             <p className="text-sm md:text-base mb-4 leading-relaxed">
               We translate advanced concepts into
-              <span className="font-semibold">
-                {" "}clear adoption roadmaps
-              </span>
-              , empowering stakeholders to move confidently from awareness to implementation.
+              <span className="font-semibold"> clear adoption roadmaps</span>,
+              empowering stakeholders to move confidently from awareness to
+              implementation.
             </p>
 
             <p className="text-sm md:text-base leading-relaxed">
-              This approach ensures innovation is inclusive, usable, and scalable.
+              This approach ensures innovation is inclusive, usable, and
+              scalable.
             </p>
           </motion.div>
         </div>
@@ -124,7 +125,6 @@ export function Simplification() {
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );

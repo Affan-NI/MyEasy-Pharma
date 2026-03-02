@@ -26,7 +26,7 @@ export default function QuickContactCTA() {
 
       {/* Email */}
       <a
-        href="dfusalilchawla@gmail.com"
+        href="mailto:dfusalilchawla@gmail.com"
         className="flex items-center gap-2 px-6 py-3 bg-red-500 text-white rounded-full shadow-lg hover:scale-110 hover:bg-red-600 transition"
       >
         <Mail size={18} />

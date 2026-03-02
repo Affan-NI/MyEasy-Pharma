@@ -48,9 +48,13 @@ Deployed using Vercel for fast global delivery.
 
 
 ## Backend / AI
+* Node.js
+* Express.js
+* RESTful API Development
+* Python (AI Disease Prediction Module)
+* Machine Learning Model Integration
+* API Routing & Middleware
 
-* Python
-* Machine Learning Model (Disease Prediction)
 
 ## Deployment
 

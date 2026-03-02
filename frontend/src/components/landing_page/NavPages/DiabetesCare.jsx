@@ -60,6 +60,7 @@ const DiabetesCare = () => {
   return (
     <div className="h-2/3 bg-[#f1f5f9] font-sans text-slate-800 p-2 md:p-6 flex justify-center overflow-hidden">
       <div className="max-w-6xl w-full bg-white rounded-3xl overflow-hidden border border-slate-200 flex flex-col max-h-full">
+
         <div className="bg-gradient-to-r from-blue-600 to-teal-500 p-6 text-white shrink-0">
           <h1 className="text-3xl font-black mb-2">
             Diabetes{" "}
@@ -72,6 +73,7 @@ const DiabetesCare = () => {
         </div>
 
         <div className="flex flex-col md:flex-row flex-1 min-h-0 overflow-hidden">
+
           <div className="w-full md:w-1/3 bg-blue-50 border-r border-blue-100 p-4 space-y-2 overflow-y-auto">
             {focusAreas.map((item, index) => (
               <button

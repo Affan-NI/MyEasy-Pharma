@@ -62,6 +62,7 @@ const WomenCare = () => {
   return (
     <div className="h-2/3 bg-[#f8fafc] font-sans text-slate-800 p-2 md:p-6 flex justify-center overflow-hidden">
       <div className="max-w-6xl w-full bg-white rounded-3xl overflow-hidden border border-slate-200 flex flex-col max-h-full">
+
         <div className="bg-gradient-to-r from-rose-600 to-slate-600 p-6 text-white shrink-0">
           <h1 className="text-3xl font-black mb-2">
             Holistic <span className="text-rose-100 italic">Wellbeing</span>
@@ -73,6 +74,7 @@ const WomenCare = () => {
         </div>
 
         <div className="flex flex-col md:flex-row flex-1 min-h-0 overflow-hidden">
+
           <div className="w-full md:w-1/3 bg-slate-50 border-r border-slate-100 p-4 space-y-2 overflow-y-auto">
             {focusAreas.map((item, index) => (
               <button

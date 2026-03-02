@@ -1,11 +1,15 @@
 import { MapPin, ShoppingCart, User, Menu, X } from "lucide-react";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Navigate, NavLink } from "react-router-dom";
 import { Link } from "lucide-react";
 import Addres from "./addres";
-
+import { useNavigate } from "react-router-dom";
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const handleNavigation = () => {
+    navigate("/"); // Navigate to the home page
+  }
 
   const navLinkClass = ({ isActive }) =>
     isActive
@@ -31,8 +35,10 @@ export function Navbar() {
                 src="/images/Logo.png"
                 alt="logo"
                 className="h-14 w-auto"
+                onClick={handleNavigation}
               />
                   <span
+                  onClick={handleNavigation}
                   className="
                     font-extrabold 
                     text-xl 
@@ -44,6 +50,7 @@ export function Navbar() {
                     bg-clip-text 
                     text-transparent
                     drop-shadow-sm
+                    cursor-pointer
                   "
                 >
                   MyEasy Pharma

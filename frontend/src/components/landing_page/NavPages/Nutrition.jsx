@@ -64,7 +64,6 @@ const Nutrition = () => {
     <div className="min-h-2/3 md:h-2/3 bg-[#f8fafc] font-sans text-slate-800 p-2 md:p-4 flex justify-center items-center">
       <div className="max-w-6xl w-full bg-white rounded-3xl overflow-hidden border border-slate-200 flex flex-col shadow-lg h-full max-h-[92vh] md:max-h-[85vh]">
         
-        {/* Header - Same structure as HeartCare */}
         <div className="bg-gradient-to-r from-cyan-600 to-slate-700 p-4 md:p-5 text-white shrink-0">
           <h1 className="text-xl md:text-3xl font-black mb-1">
             Nutrition <span className="text-cyan-100 italic">Protocol</span>
@@ -76,7 +75,6 @@ const Nutrition = () => {
 
         <div className="flex flex-col md:flex-row flex-1 min-h-0 overflow-hidden">
           
-          {/* Navigation - Same width behavior as HeartCare */}
           <div className="w-full md:w-1/3 bg-slate-50 border-b md:border-b-0 md:border-r border-slate-100 p-2 md:p-3 space-y-1 md:space-y-1.5 overflow-x-auto md:overflow-y-auto flex md:flex-col gap-2 md:gap-0 no-scrollbar">
             {focusAreas.map((item, index) => (
               <button
@@ -105,7 +103,6 @@ const Nutrition = () => {
             ))}
           </div>
 
-          {/* Details Section - Same spacing & animation */}
           <div className="w-full md:w-2/3 p-4 md:p-8 flex flex-col justify-center bg-white relative overflow-y-auto">
             <div className="animate-in fade-in slide-in-from-bottom-4 md:slide-in-from-right-4 duration-500">
               

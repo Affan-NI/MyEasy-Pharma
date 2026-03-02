@@ -7,7 +7,7 @@ import Pharma4OPage from './components/landing_page/pharma4O/pharma4Opage';
 import ServicePage from './components/landing_page/service/servicePage';
 import AboutPage from './components/landing_page/about/aboutPage';
 import ContactPage from './components/landing_page/contact/contactPage';
-
+import DiabetesCare from './components/landing_page/HealthScore/HealthScore';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { useState } from "react";
@@ -27,6 +27,7 @@ export default function App() {
           <Route path='/about' element={<AboutPage/>}/>
           <Route path='/contact' element={<ContactPage/>}/>
           <Route path='/commingsoon' element={<CommingSoon/>}/>
+          <Route path='/health-score' element={<DiabetesCare/>}/>
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -86,6 +86,7 @@ export function Navbar() {
       <div className="border-b hidden lg:block">
         <div className="container mx-auto px-6 h-12 flex items-center gap-8 text-sm font-medium">
           <NavLink to="/" className={navLinkClass}>Home</NavLink>
+          <NavLink to="/health-score" className={navLinkClass}>Health Score</NavLink>
           <NavLink to="/pharma40" className={navLinkClass}>Pharma 4.0</NavLink>
           <NavLink to="/platform" className={navLinkClass}>Platform</NavLink>
           <NavLink to="/service" className={navLinkClass}>Services</NavLink>

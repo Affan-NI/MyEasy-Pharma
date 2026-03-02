@@ -22,7 +22,7 @@ export function Navbar() {
 
       {/* Top Header */}
       <div className="border-b">
-        <div className="container mx-auto px-6 h-14 flex items-center justify-between">
+        <div className="w-ful px-6 h-14 flex items-center justify-between">
 
           {/* Logo + Address */}
           <div className="flex items-center gap-6">
@@ -84,7 +84,7 @@ export function Navbar() {
 
       {/* Main Menu (Original Links Preserved) */}
       <div className="border-b hidden lg:block">
-        <div className="container mx-auto px-6 h-12 flex items-center gap-8 text-sm font-medium">
+        <div className="w-ful px-6 h-12 flex items-center gap-8 text-sm font-medium">
           <NavLink to="/" className={navLinkClass}>Home</NavLink>
           <NavLink to="/pharma40" className={navLinkClass}>Pharma 4.0</NavLink>
           <NavLink to="/platform" className={navLinkClass}>Platform</NavLink>
@@ -106,8 +106,7 @@ export function Navbar() {
   {/* Scrollable Content */}
   <div
     className="
-      container
-      mx-auto
+      w-full
       px-4
       h-11
       flex

@@ -39,7 +39,7 @@ export function SlidingImages() {
 
   return (
     <section className="py-12 md:py-16 bg-white relative">
-      <div className="container mx-auto px-4 md:px-12 lg:px-20">
+      <div className="w-full px-4 md:px-12 lg:px-20">
 
         {/* Section Heading */}
         <div className="mb-8 md:mb-10">

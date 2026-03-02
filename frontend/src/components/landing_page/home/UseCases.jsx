@@ -45,7 +45,7 @@ export function UseCases() {
 
   return (
     <section className="py-10 md:py-12 relative">
-      <div className="container mx-auto px-4 md:px-12 lg:px-20">
+      <div className="w-full px-4 md:px-12 lg:px-20">
 
         {/* Header */}
         <div className="mb-6 md:mb-8">

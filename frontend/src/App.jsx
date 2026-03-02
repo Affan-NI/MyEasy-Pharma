@@ -7,7 +7,11 @@ import Pharma4OPage from './components/landing_page/pharma4O/pharma4Opage';
 import ServicePage from './components/landing_page/service/servicePage';
 import AboutPage from './components/landing_page/about/aboutPage';
 import ContactPage from './components/landing_page/contact/contactPage';
+<<<<<<< HEAD
 import DiabetesCare from './components/landing_page/HealthScore/HealthScore';
+=======
+import ScrollToTop from './components/landing_page/ScrollToTop';
+>>>>>>> 32e8d3ba3d6100c3f194a1a3cedd5c313012758a
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { useState } from "react";
@@ -18,6 +22,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white">
       <BrowserRouter>
+      <ScrollToTop/>
         <Navbar />
         <Routes>
           <Route path='/' element={<HomePage/>}/>

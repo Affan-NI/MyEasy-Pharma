@@ -1,9 +1,11 @@
 
 import { Building2, Users, Lightbulb, CheckCircle, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 
 export function AboutUs() {
+  const [isExpanded, setIsExpanded] = useState(false);
   const milestones = [
     { label: "Incorporated", value: "Nov 2024" },
     { label: "Startup India", value: "Registered" },
@@ -27,7 +29,6 @@ export function AboutUs() {
     <section className="py-16 bg-gradient-to-br from-teal-50 to-blue-50">
       <div className="max-w-6xl mx-auto px-6">
 
-        {/* Heading */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-100 rounded-full mb-4">
             <Building2 className="w-4 h-4 text-teal-600" />
@@ -37,10 +38,9 @@ export function AboutUs() {
             About MyEasy Pharma Pvt Ltd
           </h2>
         </div>
-        {/* 🔥 MAIN GRID */}
+
           <div className="grid lg:grid-cols-2 gap-10 items-stretch">
 
-            {/* LEFT */}
             <motion.div 
               initial={{opacity:0, x:-40}}
               whileInView={{opacity:1, x:0}}
@@ -53,6 +53,9 @@ export function AboutUs() {
                 </h3>
 
                 <div className="text-gray-700 leading-relaxed space-y-4">
+
+                <div className={`lg:block ${isExpanded ? "block" : "hidden"} lg:space-y-4`}>
+                  
                   <p>
                     Startups like <span className="font-semibold text-teal-700">MyEasy Pharma Pvt Ltd </span> 
                     are spearheading Pharma 4.0 revolutions in diabetic care management with AI-powered 
@@ -68,8 +71,7 @@ export function AboutUs() {
 
                   <p>
                     Automated manufacturing and data-driven formulations ensure precision, affordability, 
-                    and better outcomes in high-burden regions. Integrated patient portals combine wearables 
-                    and tele-consultation to enable proactive care.
+                    and better outcomes in high-burden regions.
                   </p>
 
                   <p>
@@ -81,14 +83,22 @@ export function AboutUs() {
                     This ecosystem bridges urban-rural care gaps, improves glycemic control, and transforms 
                     diabetes from a chronic burden into a manageable, tech-enabled lifestyle condition.
                   </p>
+
                 </div>
+
+                <button
+                  onClick={() => setIsExpanded(!isExpanded)}
+                  className="lg:hidden text-teal-600 font-semibold text-sm mt-2"
+                >
+                  {isExpanded ? "Read Less" : "Read More"}
+                </button>
+
+              </div>
               </div>
             </motion.div>
 
-            {/* RIGHT SIDE */}
             <div className="flex flex-col gap-8">
 
-              {/* Company overview */}
               <div className="bg-white rounded-2xl border shadow-sm p-6 md:p-8">
                 <p className="text-gray-700 leading-relaxed">
                   <span className="font-semibold text-teal-600">MyEasy Pharma Pvt Ltd</span> is a legally compliant,
@@ -106,7 +116,6 @@ export function AboutUs() {
                 </div>
               </div>
 
-              {/* Incubation */}
               <div>
                 <div className="flex items-center gap-2 mb-4">
                   <Sparkles className="w-5 h-5 text-teal-600" />
@@ -139,7 +148,6 @@ export function AboutUs() {
             </div>
           </div>
 
-          {/* PAN INDIA FULL WIDTH */}
           <div className="bg-white rounded-2xl border p-6 md:p-8 shadow-sm mt-10">
             <div className="flex items-center gap-2 mb-4">
               <Users className="w-5 h-5 text-teal-600" />
@@ -155,10 +163,9 @@ export function AboutUs() {
               ))}
             </div>
           </div>
-          {/* OFFICES */}
+
           <div className="mt-14">
 
-            {/* heading */}
             <div className="text-center mb-6">
               <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-1">
                 Our Presence
@@ -168,9 +175,9 @@ export function AboutUs() {
               </p>
             </div>
 
-            <div className="max-w-4xl mx-auto grid sm:grid-cols-2 gap-4">
+            {/* <div className="max-w-4xl mx-auto grid sm:grid-cols-2 gap-4"> */}
+            <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-2 gap-4">
 
-              {/* Bangalore */}
               <div className="rounded-xl p-5 bg-gradient-to-br from-teal-50 to-teal-100 border border-teal-600">
                 
                 <div className="flex items-center justify-between mb-2">
@@ -192,14 +199,13 @@ export function AboutUs() {
 
               </div>
 
-              {/* Delhi */}
               <div className="rounded-xl p-5 bg-gradient-to-br from-indigo-50 to-indigo-100 border border-indigo-600">
                 
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-[11px] font-semibold text-indigo-700 bg-white px-2 py-0.5 rounded-full">
                     Operational Office
                   </span>
-                  <Building2 className="w-4 h-4 text-indigo-700" />
+                  <Building2 className="ml-2 w-4 h-4 text-indigo-700" />
                 </div>
 
                 <h4 className="font-semibold text-gray-900 text-sm mb-1">
@@ -216,8 +222,6 @@ export function AboutUs() {
 
             </div>
           </div>
-
-
 
       </div>
     </section>

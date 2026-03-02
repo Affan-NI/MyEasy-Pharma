@@ -39,9 +39,8 @@ export function SlidingImages() {
 
   return (
     <section className="py-12 md:py-16 bg-white relative">
-      <div className="container mx-auto px-4 md:px-12 lg:px-20">
+      <div className="w-full px-4 md:px-12 lg:px-20">
 
-        {/* Section Heading */}
         <div className="mb-8 md:mb-10">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-700">
             Care That Transforms Lives
@@ -53,7 +52,6 @@ export function SlidingImages() {
 
         <div className="relative">
 
-          {/* Left Arrow (Hidden on Mobile) */}
           <div
             className="hidden md:flex swiper-button-prev-custom absolute 
                        md:-left-6 
@@ -67,7 +65,6 @@ export function SlidingImages() {
             <ChevronLeft size={22} />
           </div>
 
-          {/* Right Arrow (Hidden on Mobile) */}
           <div
             className="hidden md:flex swiper-button-next-custom absolute 
                        md:-right-6 
@@ -107,17 +104,14 @@ export function SlidingImages() {
                   onClick={() => navigate(item.link)}
                   className="relative rounded-2xl overflow-hidden shadow-lg cursor-pointer group"
                 >
-                  {/* Image */}
                   <img
                     src={item.img}
                     alt={item.title}
                     className="w-full h-[220px] md:h-[260px] object-cover group-hover:scale-105 transition duration-500"
                   />
 
-                  {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
 
-                  {/* Text Content */}
                   <div className="absolute bottom-4 left-4 right-4 text-white">
                     <h3 className="text-base md:text-lg font-semibold">
                       {item.title}

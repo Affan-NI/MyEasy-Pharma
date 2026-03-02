@@ -40,16 +40,14 @@ export function Categories() {
 
   return (
     <section id="medicines" className="py-10 md:py-14">
-      <div className="container mx-auto px-4 md:px-12 lg:px-20">
+      <div className="w-full px-4 md:px-12 lg:px-20">
 
-        {/* Heading */}
         <div className="mb-6 md:mb-8">
           <h2 className="text-xl md:text-3xl font-bold text-gray-700">
             Popular Medicine Categories
           </h2>
         </div>
 
-        {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {categories.map((category, index) => (
             <div
@@ -60,7 +58,6 @@ export function Categories() {
             >
               <div className="flex items-center gap-3 md:gap-4">
 
-                {/* Icon Box */}
                 <div
                   className={`w-14 h-14 md:w-20 md:h-20 ${category.bgColor} 
                               rounded-lg flex items-center justify-center 
@@ -73,7 +70,6 @@ export function Categories() {
                   />
                 </div>
 
-                {/* Text */}
                 <div>
                   <h3 className="text-base md:text-lg text-gray-900 mb-1">
                     {category.name}

@@ -11,10 +11,9 @@ export function Hero() {
 
   return (
     <section id="home" className="relative bg-gradient-to-br">
-      <div className="container mx-auto px-6 relative">
+      <div className="w-full px-6 relative">
         <div className="max-w-6xl mx-auto">
 
-          {/* HERO CARD */}
           <motion.div
             className="
               relative 
@@ -61,8 +60,6 @@ export function Hero() {
             </div>
           </motion.div>
 
-          {/* DESCRIPTION SECTION */}
-          {/* DESCRIPTION SECTION */}
 <motion.div
   className="
     relative
@@ -85,7 +82,6 @@ export function Hero() {
   transition={{ duration: 0.9 }}
 >
 
-  {/* LEFT TEXT */}
   <div className="max-w-xl">
     <h1 className="text-xl md:text-3xl font-bold text-[#F05A28] mb-1">
       Pharma 4.0
@@ -122,13 +118,11 @@ export function Hero() {
     </button>
   </div>
 
-  {/* CENTER STEPS */}
 <div className="
   grid grid-cols-2 gap-4 w-full
   md:flex md:flex-row md:items-center md:gap-6
 ">
 
-  {/* Card 1 */}
   <div className="bg-white rounded-2xl shadow-lg px-4 md:px-6 py-3 md:py-4 w-full md:w-56 text-center">
     <div className="w-9 h-9 md:w-12 md:h-12 bg-[#F05A28]/10 rounded-xl flex items-center justify-center mx-auto mb-2 md:mb-3">
       <Users className="w-4 h-4 md:w-6 md:h-6 text-[#F05A28]" />
@@ -139,10 +133,8 @@ export function Hero() {
     </p>
   </div>
 
-  {/* Arrow (Desktop Only) */}
   <ArrowRight className="hidden md:block w-6 h-6 text-[#F05A28]" />
 
-  {/* Card 2 */}
   <div className="bg-white rounded-2xl shadow-lg px-4 md:px-6 py-3 md:py-4 w-full md:w-56 text-center">
     <div className="w-9 h-9 md:w-12 md:h-12 bg-[#F05A28]/10 rounded-xl flex items-center justify-center mx-auto mb-2 md:mb-3">
       <Database className="w-4 h-4 md:w-6 md:h-6 text-[#F05A28]" />
@@ -153,10 +145,8 @@ export function Hero() {
     </p>
   </div>
 
-  {/* Arrow (Desktop Only) */}
   <ArrowRight className="hidden md:block w-6 h-6 text-[#F05A28]" />
 
-  {/* Card 3 */}
   <div className="bg-white rounded-2xl shadow-lg px-4 md:px-6 py-3 md:py-4 w-full md:w-56 text-center col-span-2 md:col-span-1">
     <div className="w-9 h-9 md:w-12 md:h-12 bg-[#F05A28]/10 rounded-xl flex items-center justify-center mx-auto mb-2 md:mb-3">
       <Activity className="w-4 h-4 md:w-6 md:h-6 text-[#F05A28]" />
@@ -169,7 +159,6 @@ export function Hero() {
 
 </div>
 
-  {/* CTA */}
   <motion.button
     onClick={() => navigate("/pharma40")}
     className="

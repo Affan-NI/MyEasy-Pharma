@@ -4,7 +4,6 @@ export default function QuickContactCTA() {
   return (
     <div className="fixed top-44 right-4 z-50 flex flex-col gap-3">
 
-      {/* WhatsApp */}
       <a
         href="https://wa.me/919350318639"
         target="_blank"
@@ -15,7 +14,6 @@ export default function QuickContactCTA() {
         <span className="hidden md:inline">WhatsApp</span>
       </a>
 
-      {/* Call */}
       <a
         href="tel:+919350318639"
         className="flex items-center gap-2 px-7 py-3 bg-blue-600 text-white rounded-full shadow-lg hover:scale-110 transition"
@@ -24,7 +22,6 @@ export default function QuickContactCTA() {
         <span className="hidden md:inline">Call</span>
       </a>
 
-      {/* Email */}
       <a
         href="mailto:dfusalilchawla@gmail.com"
         className="flex items-center gap-2 px-6 py-3 bg-red-500 text-white rounded-full shadow-lg hover:scale-110 hover:bg-red-600 transition"

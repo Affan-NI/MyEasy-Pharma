@@ -108,14 +108,10 @@ npm run dev
 ---
 
 # 📸 Screenshots
-
-You can add screenshots of the application here.
-
-Example:
-
-```
 <img width="1919" height="909" alt="image" src="https://github.com/user-attachments/assets/d435aa23-03a9-46c0-ab6d-cc35434105f4" />
 <img width="1312" height="495" alt="image" src="https://github.com/user-attachments/assets/21322713-1610-43ef-9f67-3875516d3d81" />
+
+```
 
 screenshots/prediction.png
 screenshots/dashboard.png

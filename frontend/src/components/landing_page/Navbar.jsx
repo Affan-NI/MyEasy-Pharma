@@ -160,6 +160,9 @@ export function Navbar() {
             <NavLink to="/" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass}>
               Home
             </NavLink>
+            <NavLink to="/health-score" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass}>
+              Health Score
+            </NavLink>
             <NavLink to="/pharma40" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass}>
               Pharma 4.0
             </NavLink>

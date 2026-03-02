@@ -60,8 +60,8 @@ const HeartCare = () => {
   ];
 
   return (
-    <div className="min-h-2/3 md:h-2/3 bg-[#f8fafc] font-sans text-slate-800 p-2 md:p-6 flex justify-center items-center">
-      <div className="max-w-6xl w-full bg-white rounded-3xl overflow-hidden border border-slate-200 flex flex-col  h-fit md:h-full md:max-h-[90vh]">
+    <div className="min-h-2/3 md:h-2/3 bg-[#f8fafc] font-sans text-slate-800 p-2 md:p-4 flex justify-center items-center">
+      <div className="max-w-6xl w-full bg-white rounded-3xl overflow-hidden border border-slate-200 flex flex-col shadow-lg h-full max-h-[92vh] md:max-h-[85vh]">
         
         <div className="bg-gradient-to-r from-rose-600 to-slate-600 p-4 md:p-5 text-white shrink-0">
           <h1 className="text-xl md:text-3xl font-black mb-1">Heart Care <span className="text-rose-100 italic">Parameters</span></h1>

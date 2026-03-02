@@ -3,7 +3,7 @@ import { Pill, Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from 'lucide-r
 export function Footer() {
   return (
     <footer id="contact" className="bg-gray-900 text-gray-300">
-      <div className="container mx-auto px-6 py-12">
+      <div className="w-full px-6 py-12">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>

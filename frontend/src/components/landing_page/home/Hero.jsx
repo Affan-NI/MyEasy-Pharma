@@ -11,7 +11,7 @@ export function Hero() {
 
   return (
     <section id="home" className="relative bg-gradient-to-br">
-      <div className="container mx-auto px-6 relative">
+      <div className="w-full px-6 relative">
         <div className="max-w-6xl mx-auto">
 
           <motion.div

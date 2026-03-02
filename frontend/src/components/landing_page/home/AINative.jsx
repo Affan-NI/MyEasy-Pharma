@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export function AINative() {
   return (
     <section className="py-10 md:py-14 bg-white">
-      <div className="container mx-auto px-4 md:px-12 lg:px-20">
+      <div className="w-full px-4 md:px-12 lg:px-20">
 
         <h2 className="text-xl md:text-3xl font-bold text-gray-700">
           Our Core Differentiator

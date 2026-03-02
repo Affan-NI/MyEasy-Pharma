@@ -6,7 +6,7 @@ The platform provides pharmaceutical information, disease prediction tools, and 
 The project focuses on building a **modern healthcare SaaS platform** that integrates medicine information, intelligent disease prediction, and healthcare assistance through a responsive web application.
 
 🌐 Live Demo:
-https://myeasypharma.vercel.app
+https://myeasypharma.vercel.app/
 
 ---
 
@@ -105,17 +105,31 @@ Run the development server
 npm run dev
 ```
 
+Then Go to Intelliget Disease Predictor
+
+```
+cd Intelliget Disease Predictor
+```
+
+Install dependencies
+
+```
+pip install -r requirements.txt
+```
+
+Run the development server
+
+```
+streamlit run app.py
+```
+
 ---
 
 # 📸 Screenshots
 <img width="1919" height="909" alt="image" src="https://github.com/user-attachments/assets/d435aa23-03a9-46c0-ab6d-cc35434105f4" />
 <img width="1312" height="495" alt="image" src="https://github.com/user-attachments/assets/21322713-1610-43ef-9f67-3875516d3d81" />
+<img width="1919" height="902" alt="image" src="https://github.com/user-attachments/assets/d374f418-2fb1-4f81-998a-8f81e4fe4fa0" />
 
-```
-
-screenshots/prediction.png
-screenshots/dashboard.png
-```
 
 ---
 

@@ -35,14 +35,17 @@ Deployed using Vercel for fast global delivery.
 # 🛠 Tech Stack
 
 ## Frontend
-
-* JavaScript
-* HTML
-* CSS
-* Modern UI Frameworks
-* Responsive Design
-* React
+* JavaScript (ES6+)
+* HTML5
+* CSS3
+* React.js
 * Tailwind CSS
+* Framer Motion (UI animations)
+* Responsive Web Design
+* REST API Integration
+* State Management (React Hooks)
+* Client-Side Routing
+
 
 ## Backend / AI
 

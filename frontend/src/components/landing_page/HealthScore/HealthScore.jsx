@@ -222,15 +222,15 @@ const App = () => {
         {results && (
           <div ref={resultRef} className="mt-8 pt-6 border-t border-slate-100 animate-in fade-in slide-in-from-bottom-5 duration-500">
             <div className="bg-white rounded-3xl p-4 md:p-6 shadow-xl border border-slate-100 text-center max-w-2xl mx-auto">
-              <p className="text-slate-400 font-bold uppercase tracking-widest text-[8px] mb-0.5">Overall Health Score</p>
+              <p className="text-slate-400 font-bold uppercase tracking-widest text-[12px] mb-0.5">Overall Health Score</p>
               <div className={`text-5xl font-black leading-none mb-1 ${getStatusColor(results.overall)}`}>
                 {results.overall}
               </div>
-              <div className={`text-xs font-bold uppercase tracking-[0.2em] mb-4 ${getStatusColor(results.overall)}`}>
+              <div className={`text-xg font-bold uppercase tracking-[0.2em] mb-4 ${getStatusColor(results.overall)}`}>
                 {results.overall >= 80 ? 'Healthy' : results.overall >= 60 ? 'Attention' : 'Risk'}
               </div>
 
-              <div className="max-w-[150px] mx-auto h-1.5 bg-slate-50 rounded-full overflow-hidden mb-6 border border-slate-100">
+              <div className="max-w-[400px] mx-auto h-1.5 bg-slate-50 rounded-full overflow-hidden mb-6 border border-slate-100">
                 <div 
                   className={`h-full transition-all duration-1000 ${getBgColor(results.overall)}`}
                   style={{ width: `${results.overall}%` }}
@@ -238,7 +238,7 @@ const App = () => {
               </div>
 
               <div className="grid grid-cols-4 gap-2 mb-6">
-                <ScorePill label="GSS" value={results.gss} />
+                <ScorePill label="GSS" value={results.gss}  />
                 <ScorePill label="LRI" value={results.lri} />
                 <ScorePill label="SSGS" value={results.ssgs} />
                 <ScorePill label="ECRS" value={results.ecrs} />
@@ -246,24 +246,24 @@ const App = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left border-t border-slate-100 pt-5">
                 <div>
-                  <h4 className="font-bold text-slate-900 mb-2 flex items-center gap-1.5 text-sm">
-                    <AlertTriangle className="text-orange-500" size={16} /> Top Risk Drivers
+                  <h4 className="font-bold text-slate-900 mb-2 flex items-center gap-1.5 text-lg">
+                    <AlertTriangle className="text-orange-500" size={20} /> Top Risk Drivers
                   </h4>
                   <div className="space-y-1.5">
                     {results.topRisks.map((risk, i) => (
                       <div key={i} className="bg-white p-2 rounded-lg border border-slate-100 border-l-2 border-l-[#f06529] flex justify-between items-center shadow-sm">
-                        <span className="font-bold text-slate-700 text-xs">{risk.name}</span>
-                        <span className="text-orange-600 font-black text-xs">{risk.val}%</span>
+                        <span className="font-bold text-slate-700 text-sm">{risk.name}</span>
+                        <span className="text-orange-600 font-black text-sm">{risk.val}%</span>
                       </div>
                     ))}
                   </div>
                 </div>
                 <div className="bg-emerald-50 rounded-xl p-4 text-emerald-900 border border-emerald-100 relative overflow-hidden h-full shadow-sm flex flex-col justify-center">
                   <div className="relative z-10">
-                    <h4 className="font-bold mb-1 text-emerald-600 flex items-center gap-1.5 text-xs">
-                      <Lightbulb size={16} /> Smart Nudge
+                    <h4 className="font-bold mb-1 text-emerald-600 flex items-center gap-1.5 text-lg">
+                      <Lightbulb size={20} /> Smart Nudge
                     </h4>
-                    <p className="text-xs font-medium leading-tight italic opacity-90">
+                    <p className="text-sm font-medium leading-tight italic opacity-90">
                       "{results.nudge}"
                     </p>
                   </div>
@@ -281,10 +281,10 @@ const App = () => {
 const InputField = ({ id, label, hint, value, onChange }) => (
   <div className="space-y-2 group">
     <div className="flex items-center gap-1.5">
-      <label htmlFor={id} className="block text-[11px] font-black text-slate-500 uppercase tracking-widest">{label}</label>
+      <label htmlFor={id} className="block text-[12px] font-black text-slate-500 uppercase tracking-widest">{label}</label>
       <div className="relative group/hint">
         <HelpCircle size={14} className="text-slate-300 cursor-help" />
-        <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-56 bg-slate-800 text-white text-[11px] p-3 rounded-xl opacity-0 group-hover/hint:opacity-100 transition-opacity pointer-events-none z-50 shadow-2xl leading-snug">
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-56 bg-slate-800 text-white text-[13px] p-3 rounded-xl opacity-0 group-hover/hint:opacity-100 transition-opacity pointer-events-none z-50 shadow-2xl leading-snug">
           {hint}
         </div>
       </div>
@@ -293,14 +293,14 @@ const InputField = ({ id, label, hint, value, onChange }) => (
       type="number" id={id} value={value} onChange={onChange} placeholder="0-100"
       className="w-full bg-white border border-slate-200 rounded-2xl px-4 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#10b981] transition-all placeholder:text-slate-300 font-medium"
     />
-    <p className="text-[12px] text-slate-500 font-semibold italic mt-1.5 leading-relaxed">{hint}</p>
+    <p className="text-[13px] text-slate-500 font-semibold italic mt-1.5 leading-relaxed">{hint}</p>
   </div>
 );
 
 const ScorePill = ({ label, value }) => (
   <div className="bg-white border border-slate-100 rounded-xl p-2 shadow-sm text-center">
-    <div className="text-base font-black text-emerald-800 leading-none mb-0.5">{value}</div>
-    <div className="text-[8px] font-bold text-slate-400 uppercase tracking-tighter">{label}</div>
+    <div className="text-xg font-black text-emerald-800 leading-none mb-0.5">{value}</div>
+    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-tighter">{label}</div>
   </div>
 );
 

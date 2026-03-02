@@ -13,7 +13,6 @@ export function NextGen() {
     <section className="py-10 md:py-16 bg-white">
       <div className="container mx-auto px-4 md:px-12 lg:px-20">
 
-        {/* Header */}
         <motion.div
           className="text-center mb-8 md:mb-12"
           initial={{ opacity: 0, y: 30 }}
@@ -32,7 +31,6 @@ export function NextGen() {
           </p>
         </motion.div>
 
-        {/* Team Grid */}
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8 md:mb-12">
           {team.map((member, index) => (
             <motion.div
@@ -59,7 +57,6 @@ export function NextGen() {
           ))}
         </div>
 
-        {/* Commitment Section */}
         <div className="bg-teal-800 rounded-2xl p-5 md:p-10 text-white mb-8 md:mb-12">
           <div className="flex flex-col md:flex-row items-start gap-4">
             <div className="w-10 h-10 md:w-12 md:h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -83,10 +80,8 @@ export function NextGen() {
           </div>
         </div>
 
-        {/* Vision Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
 
-          {/* Today */}
           <div className="p-5 md:p-8 bg-gray-50 rounded-xl border border-gray-200">
             <h4 className="text-lg md:text-xl text-gray-900 mb-4">
               Building for Today
@@ -108,7 +103,6 @@ export function NextGen() {
             </ul>
           </div>
 
-          {/* Tomorrow */}
           <div className="p-5 md:p-8 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border border-blue-200">
             <h4 className="text-lg md:text-xl text-gray-900 mb-4">
               Building for Tomorrow

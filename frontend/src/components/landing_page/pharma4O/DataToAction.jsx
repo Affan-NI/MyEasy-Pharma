@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export function DataToAction() {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4">
 
         <motion.div
@@ -22,7 +22,7 @@ export function DataToAction() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5">
           {[
             {
               icon: Activity,
@@ -49,16 +49,27 @@ export function DataToAction() {
             return (
               <div
                 key={i}
-                className="bg-white rounded-xl p-5 border border-gray-200 shadow-sm hover:shadow-md transition"
+                className="
+                bg-white rounded-xl
+                p-3 sm:p-4 md:p-5 bg-gradient-to-br from-green-50 to-teal-50
+                border border-gray-200
+                shadow-sm hover:shadow-md
+                transition
+                "
               >
-                <div className="w-11 h-11 bg-gradient-to-r from-green-600 to-teal-600 rounded-lg flex items-center justify-center mb-3">
-                  <Icon className="w-5 h-5 text-white" />
+                <div className="
+                w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11
+                bg-gradient-to-r from-green-600 to-teal-600
+                rounded-lg flex items-center justify-center
+                mb-2 sm:mb-3
+                ">
+                  <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </div>
 
-                <h4 className="text-sm font-semibold text-gray-900 mb-1">
+                <h4 className="text-xs sm:text-sm font-semibold text-gray-900 mb-1">
                   {item.title}
                 </h4>
-                <p className="text-xs text-gray-600">{item.desc}</p>
+                <p className="text-[11px] sm:text-xs text-gray-600 leading-snug">{item.desc}</p>
               </div>
             );
           })}

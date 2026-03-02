@@ -56,7 +56,6 @@ export function PharmacyServices() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="max-w-5xl mx-auto">
 
-          {/* Header */}
           <motion.div
             className="text-center mb-10"
             initial={{ opacity: 0, y: 25 }}
@@ -79,7 +78,6 @@ export function PharmacyServices() {
             </p>
           </motion.div>
 
-          {/* Image */}
           <motion.div
             className="mb-12 rounded-2xl overflow-hidden shadow-lg"
             initial={{ opacity: 0, scale: 0.96 }}
@@ -92,8 +90,8 @@ export function PharmacyServices() {
             />
           </motion.div>
 
-          {/* Services */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"> */}
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12">
             {services.map((service, index) => {
               const Icon = service.icon;
 
@@ -101,8 +99,10 @@ export function PharmacyServices() {
                 <motion.div
                   key={index}
                   className="
-                  group bg-white rounded-2xl shadow-sm hover:shadow-2xl
-                  transition-all duration-500 ease-out p-5 text-center
+                  group w-full min-w-0
+                  bg-white rounded-2xl shadow-sm hover:shadow-2xl
+                  transition-all duration-500 ease-out
+                  p-4 sm:p-5 text-center
                   hover:-translate-y-1
                   "
                   initial={{ opacity: 0, y: 25 }}
@@ -142,7 +142,6 @@ export function PharmacyServices() {
               );
             })}
           </div>
-          {/* CTA */}
           <motion.div
             className="
             relative overflow-hidden
@@ -155,13 +154,11 @@ export function PharmacyServices() {
             whileInView={{ opacity: 1, y: 0 }}
           >
 
-            {/* glow */}
             <div className="absolute -top-16 -left-16 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
             <div className="absolute -bottom-16 -right-16 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
 
             <div className="relative z-10">
 
-              {/* Title */}
               <h3 className="text-lg md:text-xl font-semibold mb-1">
                 Need Health Support?
               </h3>
@@ -169,8 +166,6 @@ export function PharmacyServices() {
               <p className="text-sm opacity-90 mb-4">
                 We’re here to guide and support your health journey.
               </p>
-
-               {/* buttons */}
 
               <button
                 onClick={() => navigate("/contact")}
@@ -196,7 +191,6 @@ export function PharmacyServices() {
                 </button>
               )}
 
-              {/* EXPAND AREA */}
               <motion.div
                 initial={false}
                 animate={{

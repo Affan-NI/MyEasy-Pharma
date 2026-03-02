@@ -6,12 +6,10 @@ export function AINative() {
     <section className="py-10 md:py-14 bg-white">
       <div className="container mx-auto px-4 md:px-12 lg:px-20">
 
-        {/* Heading */}
         <h2 className="text-xl md:text-3xl font-bold text-gray-700">
           Our Core Differentiator
         </h2>
 
-        {/* IMAGE + LAYERS */}
         <motion.div
           className="mt-6 mb-6 bg-gradient-to-br from-purple-50 to-indigo-50 
                      rounded-2xl border border-purple-200 overflow-hidden"
@@ -22,7 +20,6 @@ export function AINative() {
         >
           <div className="grid md:grid-cols-3">
 
-            {/* Image Section */}
             <div className="relative md:col-span-1">
               <img
                 src="https://images.unsplash.com/photo-1569396116180-210c182bedb8?auto=format&fit=crop&w=1200&q=80"
@@ -30,7 +27,6 @@ export function AINative() {
                 className="w-full object-cover h-64 md:h-full"
               />
 
-              {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t 
                               from-black/80 via-black/60 to-transparent 
                               flex items-end p-4 md:p-6">
@@ -49,10 +45,8 @@ export function AINative() {
               </div>
             </div>
 
-            {/* Layers Section */}
             <div className="md:col-span-2 p-4 md:p-8">
 
-              {/* Layers Grid */}
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 mb-4 md:mb-6">
 
                 <div className="text-center p-3 md:p-4 bg-white rounded-lg border border-purple-200">

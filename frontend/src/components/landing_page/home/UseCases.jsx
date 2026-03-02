@@ -47,7 +47,6 @@ export function UseCases() {
     <section className="py-10 md:py-12 relative">
       <div className="container mx-auto px-4 md:px-12 lg:px-20">
 
-        {/* Header */}
         <div className="mb-6 md:mb-8">
           <h2 className="text-xl md:text-3xl font-bold text-gray-700">
             Real-World Use Cases Across Stakeholders
@@ -56,7 +55,6 @@ export function UseCases() {
 
         <div className="relative">
 
-          {/* Left Arrow */}
           <div
   className="swiper-button-prev-custom absolute 
              -left-4 md:-left-6   /* negative on mobile also */
@@ -108,7 +106,6 @@ export function UseCases() {
                              hover:shadow-md hover:border-blue-300 
                              transition-all cursor-pointer"
                 >
-                  {/* Image (Smaller on Mobile) */}
                   <div className="h-20 md:h-32 flex items-center justify-center">
                     <img
                       src={item.image}

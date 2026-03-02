@@ -24,7 +24,6 @@ export function Simplification() {
     <section className="py-10 md:py-16">
       <div className="container mx-auto px-4 md:px-12 lg:px-20">
 
-        {/* Header */}
         <motion.div
           className="text-center mb-8 md:mb-12"
           initial={{ opacity: 0, y: 30 }}
@@ -46,10 +45,8 @@ export function Simplification() {
           </p>
         </motion.div>
 
-        {/* Problem + Solution */}
         <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
 
-          {/* Challenge */}
           <motion.div
             className="bg-white p-5 md:p-8 rounded-2xl border border-gray-200 shadow-sm"
             initial={{ opacity: 0, x: -30 }}
@@ -75,7 +72,6 @@ export function Simplification() {
             </p>
           </motion.div>
 
-          {/* Solution */}
           <motion.div
             className="bg-gradient-to-br from-teal-500 to-blue-600 text-white p-5 md:p-8 rounded-2xl shadow-lg"
             initial={{ opacity: 0, x: 30 }}
@@ -104,7 +100,6 @@ export function Simplification() {
           </motion.div>
         </div>
 
-        {/* Activities */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {activities.map((activity, index) => (
             <motion.div

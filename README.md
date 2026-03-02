@@ -41,6 +41,8 @@ Deployed using Vercel for fast global delivery.
 * CSS
 * Modern UI Frameworks
 * Responsive Design
+* React
+* Tailwind CSS
 
 ## Backend / AI
 
@@ -50,6 +52,7 @@ Deployed using Vercel for fast global delivery.
 ## Deployment
 
 * Vercel
+* render
 
 ## Version Control
 

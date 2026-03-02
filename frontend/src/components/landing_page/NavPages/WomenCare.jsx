@@ -63,8 +63,7 @@ const WomenCare = () => {
     <div className="h-2/3 bg-[#f8fafc] font-sans text-slate-800 p-2 md:p-6 flex justify-center overflow-hidden">
       
       <div className="max-w-6xl w-full bg-white rounded-3xl overflow-hidden border border-slate-200 flex flex-col max-h-full">
-        
-        {/* Header */}
+
         <div className="bg-gradient-to-r from-rose-600 to-slate-600 p-6 text-white shrink-0">
           <h1 className="text-3xl font-black mb-2">
             Holistic <span className="text-rose-100 italic">Wellbeing</span>
@@ -76,8 +75,7 @@ const WomenCare = () => {
         </div>
 
         <div className="flex flex-col md:flex-row flex-1 min-h-0 overflow-hidden">
-          
-          {/* Sidebar */}
+
           <div className="w-full md:w-1/3 bg-slate-50 border-r border-slate-100 p-4 space-y-2 overflow-y-auto">
             {focusAreas.map((item, index) => (
               <button
@@ -104,7 +102,6 @@ const WomenCare = () => {
             ))}
           </div>
 
-          {/* Details Panel */}
           <div className="w-full md:w-2/3 p-8 flex flex-col justify-center bg-white relative overflow-y-auto">
             
             <div>
@@ -142,7 +139,6 @@ const WomenCare = () => {
                 </div>
               </div>
 
-              {/* Impact Box */}
               <div className="mt-8 p-6 bg-gradient-to-br from-slate-50 to-rose-50/40 rounded-2xl border border-slate-100 relative overflow-hidden group">
                 <div className="relative z-10">
                   <div className="flex items-center gap-2 mb-2">

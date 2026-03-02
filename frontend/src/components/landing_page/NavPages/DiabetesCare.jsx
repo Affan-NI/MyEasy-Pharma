@@ -62,7 +62,6 @@ const DiabetesCare = () => {
       
       <div className="max-w-6xl w-full bg-white rounded-3xl overflow-hidden border border-slate-200 flex flex-col max-h-full">
         
-        {/* Header */}
         <div className="bg-gradient-to-r from-blue-600 to-teal-500 p-6 text-white shrink-0">
           <h1 className="text-3xl font-black mb-2">
             Diabetes <span className="text-blue-100 italic">Care Intelligence</span>
@@ -75,7 +74,6 @@ const DiabetesCare = () => {
 
         <div className="flex flex-col md:flex-row flex-1 min-h-0 overflow-hidden">
           
-          {/* Sidebar */}
           <div className="w-full md:w-1/3 bg-blue-50 border-r border-blue-100 p-4 space-y-2 overflow-y-auto">
             {focusAreas.map((item, index) => (
               <button
@@ -102,7 +100,6 @@ const DiabetesCare = () => {
             ))}
           </div>
 
-          {/* Details Panel */}
           <div className="w-full md:w-2/3 p-8 flex flex-col justify-center bg-white relative overflow-y-auto">
             
             <div>
@@ -140,7 +137,6 @@ const DiabetesCare = () => {
                 </div>
               </div>
 
-              {/* Clinical Value Box */}
               <div className="mt-8 p-6 bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl border border-blue-100 relative overflow-hidden">
                 <div className="relative z-10">
                   <div className="flex items-center gap-2 mb-2">

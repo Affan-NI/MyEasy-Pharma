@@ -37,7 +37,7 @@ export default function App() {
           <Route path='/contact' element={<ContactPage/>}/>
           <Route path='/commingsoon' element={<CommingSoon/>}/>
           <Route path='/health-score' element={<HealthScore/>}/>
-
+ 
           <Route path='/nutirition' element={<Nutrition/>}/>
           <Route path='/diabetescare' element={<DiabetesCare/>}/>
           <Route path='/womencare' element={<WomenCare/>}/>

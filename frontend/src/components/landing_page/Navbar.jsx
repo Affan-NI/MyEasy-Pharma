@@ -124,16 +124,16 @@ export function Navbar() {
     <NavLink to="/commingsoon" state="Products" className="flex-shrink-0 hover:text-green-300 transition">
       Products
     </NavLink>
-    <NavLink to="/commingsoon" state="Nutrition" className="flex-shrink-0 hover:text-green-300 transition">
+    <NavLink to="/nutirition" state="Nutrition" className="flex-shrink-0 hover:text-green-300 transition">
       Nutrition
     </NavLink>
-    <NavLink to="/commingsoon" state="Women Care" className="flex-shrink-0 hover:text-green-300 transition">
+    <NavLink to="/womencare" state="Women Care" className="flex-shrink-0 hover:text-green-300 transition">
       Women Care
     </NavLink>
-    <NavLink to="/commingsoon" state="Diabetes Care" className="flex-shrink-0 hover:text-green-300 transition">
+    <NavLink to="/diabetescare" state="Diabetes Care" className="flex-shrink-0 hover:text-green-300 transition">
       Diabetes Care
     </NavLink>
-    <NavLink to="/commingsoon" state="Heart Car" className="flex-shrink-0 hover:text-green-300 transition">
+    <NavLink to="/heartcare" state="Heart Car" className="flex-shrink-0 hover:text-green-300 transition">
       Heart Care
     </NavLink>
     <NavLink to="/commingsoon" state="Doctors & Clinicians" className="flex-shrink-0 hover:text-green-300 transition">
@@ -142,10 +142,10 @@ export function Navbar() {
     <NavLink to="/commingsoon" state="Pharma & Research" className="flex-shrink-0 hover:text-green-300 transition">
       Pharma & Research
     </NavLink>
-    <NavLink to="/commingsoon" state="Diet Plan" className="flex-shrink-0 hover:text-green-300 transition">
+    <NavLink to="/dietplan" state="Diet Plan" className="flex-shrink-0 hover:text-green-300 transition">
       Diet Plan
     </NavLink>
-    <NavLink to="/commingsoon" state="Care Coordinators" className="flex-shrink-0 hover:text-green-300 transition">
+    <NavLink to="/carecoordinators" state="Care Coordinators" className="flex-shrink-0 hover:text-green-300 transition">
       Care Coordinators
     </NavLink>
   </div>

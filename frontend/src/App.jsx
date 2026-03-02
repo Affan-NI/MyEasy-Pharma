@@ -14,7 +14,7 @@ import DiabetesCare from './components/landing_page/NavPages/DiabetesCare';
 import WomenCare from './components/landing_page/NavPages/WomenCare';
 import HeartCare from './components/landing_page/NavPages/HeartCare';
 import DietPlan from './components/landing_page/NavPages/DietPlan';
-import CareCoordinators from './components/landing_page/NavPages/CareCoordinators';
+
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -43,7 +43,6 @@ export default function App() {
           <Route path='/womencare' element={<WomenCare/>}/>
           <Route path='/heartcare' element={<HeartCare/>}/>
           <Route path='/dietplan' element={<DietPlan/>}/>
-          <Route path='/carecoordinators' element={<CareCoordinators/>}/>
         </Routes>
         <Footer />
       </BrowserRouter>

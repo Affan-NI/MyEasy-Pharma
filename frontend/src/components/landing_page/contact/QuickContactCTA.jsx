@@ -3,7 +3,6 @@ import { Phone, MessageCircle, Mail } from "lucide-react";
 export default function QuickContactCTA() {
   return (
     <div className="fixed top-44 right-4 z-50 flex flex-col gap-3">
-
       <a
         href="https://wa.me/919350318639"
         target="_blank"
@@ -29,8 +28,6 @@ export default function QuickContactCTA() {
         <Mail size={18} />
         <span className="hidden md:inline">Email</span>
       </a>
-
     </div>
   );
 }
-

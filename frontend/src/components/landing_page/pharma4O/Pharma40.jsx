@@ -5,7 +5,6 @@ export function Pharma40() {
   return (
     <section id="pharma40" className="py-14 bg-white">
       <div className="max-w-6xl mx-auto px-4">
-
         <motion.div
           className="text-center mb-8"
           initial={{ opacity: 0, y: 25 }}
@@ -22,7 +21,6 @@ export function Pharma40() {
           </p>
         </motion.div>
 
-        {/* <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-5 mb-8"> */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5 mb-8">
           {[
             {
@@ -63,15 +61,14 @@ export function Pharma40() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05 }}
               >
-                {/* <div className="w-11 h-11 bg-gradient-to-r from-green-600 to-teal-600 rounded-lg flex items-center justify-center mb-3">
-                  <Icon className="w-5 h-5 text-white" />
-                </div> */}
-                <div className="
+                <div
+                  className="
                 w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11
                 bg-gradient-to-r from-green-600 to-teal-600
                 rounded-lg flex items-center justify-center
                 mb-2 sm:mb-3
-                ">
+                "
+                >
                   <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </div>
 
@@ -79,7 +76,9 @@ export function Pharma40() {
                   {item.title}
                 </h3>
 
-                <p className="text-[11px] sm:text-xs text-gray-600 leading-snug">{item.desc}</p>
+                <p className="text-[11px] sm:text-xs text-gray-600 leading-snug">
+                  {item.desc}
+                </p>
               </motion.div>
             );
           })}
@@ -100,4 +99,3 @@ export function Pharma40() {
     </section>
   );
 }
-

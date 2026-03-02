@@ -5,7 +5,6 @@ export function IndiasMoment() {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4">
-
         <motion.div
           className="text-center mb-10"
           initial={{ opacity: 0, y: 25 }}
@@ -24,7 +23,6 @@ export function IndiasMoment() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6 mb-10">
-
           <motion.div
             className="
             bg-white rounded-xl p-6 border border-gray-200
@@ -71,7 +69,6 @@ export function IndiasMoment() {
           </motion.div>
         </div>
 
-        {/* <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-5"> */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5">
           {[
             {
@@ -112,20 +109,24 @@ export function IndiasMoment() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.05 }}
               >
-                <div className="
+                <div
+                  className="
                 w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11
                 mx-auto mb-2
                 bg-gradient-to-r from-green-600 to-teal-600
                 rounded-lg flex items-center justify-center
                 group-hover:scale-105 transition
-                ">
+                "
+                >
                   <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </div>
 
                 <h4 className="text-xs sm:text-sm font-semibold text-gray-900">
                   {item.title}
                 </h4>
-                <p className="text-[11px] sm:text-xs text-gray-600 leading-snug">{item.desc}</p>
+                <p className="text-[11px] sm:text-xs text-gray-600 leading-snug">
+                  {item.desc}
+                </p>
               </motion.div>
             );
           })}
@@ -136,15 +137,16 @@ export function IndiasMoment() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
         >
-          <div className="
+          <div
+            className="
             inline-block px-6 py-3 rounded-full
             bg-gradient-to-r from-green-600 to-teal-600
             text-white text-sm shadow
-          ">
+          "
+          >
             Moving from digital records → to meaningful, connected care
           </div>
         </motion.div>
-
       </div>
     </section>
   );

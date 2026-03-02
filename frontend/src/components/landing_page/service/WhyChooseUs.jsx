@@ -23,21 +23,18 @@ export function WhyChooseUs() {
     {
       icon: Clock,
       title: "Always Available",
-      description:
-        "Reach out anytime for support, questions or assistance.",
+      description: "Reach out anytime for support, questions or assistance.",
     },
     {
       icon: Smile,
       title: "Friendly Support",
-      description:
-        "Simple, approachable and stress-free experience for users.",
+      description: "Simple, approachable and stress-free experience for users.",
     },
   ];
 
   return (
     <section className="pb-10 bg-gradient-to-br from-green-50 to-teal-50">
       <div className="max-w-6xl mx-auto px-4">
-
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold text-gray-900 mb-2">
             Why Choose Us
@@ -47,14 +44,15 @@ export function WhyChooseUs() {
           </p>
         </div>
 
-        {/* <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6"> */}
-        <div className="
+        <div
+          className="
           flex md:grid md:grid-cols-3 lg:grid-cols-5
           gap-4 sm:gap-6
           overflow-x-auto md:overflow-visible
           snap-x snap-mandatory
           pb-2
-        ">
+        "
+        >
           {reasons.map((item, i) => {
             const Icon = item.icon;
 
@@ -77,13 +75,15 @@ export function WhyChooseUs() {
                 hover:-translate-y-1
                 "
               >
-                <div className="
+                <div
+                  className="
                   w-12 h-12 mx-auto mb-3 rounded-full 
                   bg-gradient-to-r from-green-600 to-teal-600 
                   flex items-center justify-center
                   transition-all duration-500
                   group-hover:scale-110
-                ">
+                "
+                >
                   <Icon className="text-white w-6 h-6" />
                 </div>
 
@@ -102,19 +102,20 @@ export function WhyChooseUs() {
                 "
                 >
                   <div className="overflow-hidden">
-                    <p className="
+                    <p
+                      className="
                       text-xs text-gray-600 mt-3
                       opacity-0 
                       translate-y-2
                       group-hover:opacity-100
                       group-hover:translate-y-0
                       transition-all duration-500 delay-100
-                    ">
+                    "
+                    >
                       {item.description}
                     </p>
                   </div>
                 </div>
-
               </div>
             );
           })}
@@ -123,5 +124,3 @@ export function WhyChooseUs() {
     </section>
   );
 }
-
-

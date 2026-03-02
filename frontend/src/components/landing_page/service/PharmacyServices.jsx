@@ -3,49 +3,47 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-
 export function PharmacyServices() {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
-
 
   const services = [
     {
       icon: Heart,
       title: "Health Support",
       description:
-        "Guidance for maintaining daily health and wellness and staying consistent."
+        "Guidance for maintaining daily health and wellness and staying consistent.",
     },
     {
       icon: Users,
       title: "Chronic Care Support",
       description:
-        "Support for diabetes, BP and long-term conditions with regular assistance."
+        "Support for diabetes, BP and long-term conditions with regular assistance.",
     },
     {
       icon: Activity,
       title: "Lifestyle Guidance",
       description:
-        "Help with routine, sleep and healthy habits for better daily balance."
+        "Help with routine, sleep and healthy habits for better daily balance.",
     },
     {
       icon: Phone,
       title: "Quick Assistance",
       description:
-        "Reach out anytime for help, queries or support from our team."
+        "Reach out anytime for help, queries or support from our team.",
     },
     {
       icon: Shield,
       title: "Trusted Care",
       description:
-        "Reliable support focused on safety, consistency and well-being."
+        "Reliable support focused on safety, consistency and well-being.",
     },
     {
       icon: Clock,
       title: "Always Available",
       description:
-        "Support whenever you need guidance or help with your health routine."
-    }
+        "Support whenever you need guidance or help with your health routine.",
+    },
   ];
 
   return (
@@ -55,7 +53,6 @@ export function PharmacyServices() {
     >
       <div className="max-w-6xl mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-
           <motion.div
             className="text-center mb-10"
             initial={{ opacity: 0, y: 25 }}
@@ -90,7 +87,6 @@ export function PharmacyServices() {
             />
           </motion.div>
 
-          {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"> */}
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12">
             {services.map((service, index) => {
               const Icon = service.icon;
@@ -109,12 +105,14 @@ export function PharmacyServices() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.05 }}
                 >
-                  <div className="
+                  <div
+                    className="
                     w-12 h-12 mx-auto mb-3 rounded-full
                     bg-gradient-to-r from-green-600 to-teal-600
                     flex items-center justify-center
                     transition-all duration-500 group-hover:scale-110
-                  ">
+                  "
+                  >
                     <Icon className="text-white w-6 h-6" />
                   </div>
 
@@ -122,18 +120,22 @@ export function PharmacyServices() {
                     {service.title}
                   </h3>
 
-                  <div className="
+                  <div
+                    className="
                     grid transition-all duration-500 ease-in-out
                     [grid-template-rows:0fr]
                     group-hover:[grid-template-rows:1fr]
-                  ">
+                  "
+                  >
                     <div className="overflow-hidden">
-                      <p className="
+                      <p
+                        className="
                         text-xs text-gray-600 mt-3
                         opacity-0 translate-y-2
                         group-hover:opacity-100 group-hover:translate-y-0
                         transition-all duration-500 delay-100
-                      ">
+                      "
+                      >
                         {service.description}
                       </p>
                     </div>
@@ -153,12 +155,10 @@ export function PharmacyServices() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
           >
-
             <div className="absolute -top-16 -left-16 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
             <div className="absolute -bottom-16 -right-16 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
 
             <div className="relative z-10">
-
               <h3 className="text-lg md:text-xl font-semibold mb-1">
                 Need Health Support?
               </h3>
@@ -201,15 +201,15 @@ export function PharmacyServices() {
                 className="overflow-hidden"
               >
                 <div className="mt-4 border-t border-white/30 pt-4">
-
                   <p className="text-sm leading-relaxed opacity-95 max-w-2xl mx-auto">
-                    Our platform provides continuous health support through lifestyle
-                    guidance, routine tracking and long-term care assistance. We help
-                    individuals stay consistent with their health goals by offering
-                    structured support, easy communication and reliable guidance.
-                    Whether it’s maintaining daily wellness or managing long-term
-                    conditions, our focus is to ensure users feel supported and
-                    confident in their health journey.
+                    Our platform provides continuous health support through
+                    lifestyle guidance, routine tracking and long-term care
+                    assistance. We help individuals stay consistent with their
+                    health goals by offering structured support, easy
+                    communication and reliable guidance. Whether it’s
+                    maintaining daily wellness or managing long-term conditions,
+                    our focus is to ensure users feel supported and confident in
+                    their health journey.
                   </p>
 
                   <button
@@ -222,10 +222,8 @@ export function PharmacyServices() {
                   >
                     Learn Less
                   </button>
-
                 </div>
               </motion.div>
-
             </div>
           </motion.div>
         </div>

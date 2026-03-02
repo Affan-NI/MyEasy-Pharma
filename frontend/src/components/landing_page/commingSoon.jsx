@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const CommingSoon = () => {
   const location = useLocation();
   const pageName = location.state || "Products";
 
   const [timeLeft, setTimeLeft] = useState({
-    days: '00',
-    hours: '00',
-    minutes: '00',
-    seconds: '00'
+    days: "00",
+    hours: "00",
+    minutes: "00",
+    seconds: "00",
   });
 
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
 
   useEffect(() => {
@@ -31,24 +31,16 @@ const CommingSoon = () => {
       setTimeLeft({
         days: Math.floor(distance / (1000 * 60 * 60 * 24))
           .toString()
-          .padStart(2, '0'),
-        hours: Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) /
-            (1000 * 60 * 60)
-        )
+          .padStart(2, "0"),
+        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
           .toString()
-          .padStart(2, '0'),
-        minutes: Math.floor(
-          (distance % (1000 * 60 * 60)) /
-            (1000 * 60)
-        )
+          .padStart(2, "0"),
+        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
           .toString()
-          .padStart(2, '0'),
-        seconds: Math.floor(
-          (distance % (1000 * 60)) / 1000
-        )
+          .padStart(2, "0"),
+        seconds: Math.floor((distance % (1000 * 60)) / 1000)
           .toString()
-          .padStart(2, '0')
+          .padStart(2, "0"),
       });
     }, 1000);
 
@@ -64,40 +56,33 @@ const CommingSoon = () => {
 
   return (
     <div className="bg-[#f0f9f6] relative flex flex-col items-center py-20 px-6 overflow-hidden">
-
-      {/* Background Pattern */}
       <div
         className="absolute inset-0 opacity-30 pointer-events-none"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2310b981' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2310b981' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }}
       ></div>
 
-      {/* Gradient Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-emerald-100/60 via-transparent to-teal-50/40 pointer-events-none"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_var(--tw-gradient-stops))] from-green-100/50 via-transparent to-transparent pointer-events-none"></div>
 
       <main className="relative z-10 max-w-4xl w-full text-center">
-
-        {/* Heading */}
         <div className="overflow-hidden mb-4 flex items-center justify-center">
           <h1 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tight">
             {pageName} Coming Soon
           </h1>
         </div>
 
-        {/* Subheading */}
         <p className="text-lg md:text-xl font-semibold text-emerald-600 mb-8">
           Your Trusted Online Pharmacy & AI Health Partner
         </p>
 
-        {/* Countdown */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
           {[
-            { label: 'Days', value: timeLeft.days },
-            { label: 'Hours', value: timeLeft.hours },
-            { label: 'Minutes', value: timeLeft.minutes },
-            { label: 'Seconds', value: timeLeft.seconds }
+            { label: "Days", value: timeLeft.days },
+            { label: "Hours", value: timeLeft.hours },
+            { label: "Minutes", value: timeLeft.minutes },
+            { label: "Seconds", value: timeLeft.seconds },
           ].map((item) => (
             <div
               key={item.label}
@@ -113,7 +98,6 @@ const CommingSoon = () => {
           ))}
         </div>
 
-        {/* Notification Section */}
         {!isSubscribed ? (
           <div className="max-w-md mx-auto">
             <h3 className="text-base font-semibold text-slate-800 mb-4">

@@ -5,7 +5,6 @@ export function DataToAction() {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4">
-
         <motion.div
           className="text-center mb-10"
           initial={{ opacity: 0, y: 25 }}
@@ -57,19 +56,23 @@ export function DataToAction() {
                 transition
                 "
               >
-                <div className="
+                <div
+                  className="
                 w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11
                 bg-gradient-to-r from-green-600 to-teal-600
                 rounded-lg flex items-center justify-center
                 mb-2 sm:mb-3
-                ">
+                "
+                >
                   <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </div>
 
                 <h4 className="text-xs sm:text-sm font-semibold text-gray-900 mb-1">
                   {item.title}
                 </h4>
-                <p className="text-[11px] sm:text-xs text-gray-600 leading-snug">{item.desc}</p>
+                <p className="text-[11px] sm:text-xs text-gray-600 leading-snug">
+                  {item.desc}
+                </p>
               </div>
             );
           })}

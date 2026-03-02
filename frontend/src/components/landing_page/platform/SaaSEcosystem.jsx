@@ -36,7 +36,6 @@ export function SaaSEcosystem() {
   return (
     <section id="platform" className="py-14 bg-white">
       <div className="max-w-6xl mx-auto px-4">
-
         <motion.div
           className="text-center mb-8"
           initial={{ opacity: 0, y: 25 }}
@@ -59,14 +58,15 @@ export function SaaSEcosystem() {
           </p>
         </motion.div>
 
-        {/* <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 mb-8"> */}
-        <div className="
+        <div
+          className="
           flex sm:grid sm:grid-cols-2 md:grid-cols-3
           gap-4 sm:gap-5
           overflow-x-auto sm:overflow-visible
           snap-x snap-mandatory
           pb-2 mb-8
-        ">
+        "
+        >
           {cards.map((card, index) => {
             const Icon = card.icon;
 
@@ -90,12 +90,14 @@ export function SaaSEcosystem() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05 }}
               >
-                <div className="
+                <div
+                  className="
                 w-9 h-9 sm:w-11 sm:h-11
                 bg-gradient-to-r from-green-600 to-teal-600
                 rounded-lg flex items-center justify-center
                 mb-2 sm:mb-3
-                ">
+                "
+                >
                   <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </div>
 
@@ -103,7 +105,9 @@ export function SaaSEcosystem() {
                   {card.title}
                 </h3>
 
-                <p className="text-[11px] sm:text-xs text-gray-600">{card.desc}</p>
+                <p className="text-[11px] sm:text-xs text-gray-600">
+                  {card.desc}
+                </p>
               </motion.div>
             );
           })}
@@ -155,13 +159,15 @@ export function SaaSEcosystem() {
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 bg-gradient-to-r from-green-200/20 to-teal-200/20"></div>
 
                   <div className="relative flex items-start gap-3">
-                    <div className="
+                    <div
+                      className="
                       w-10 h-10 rounded-lg
                       bg-gradient-to-r from-green-600 to-teal-600
                       flex items-center justify-center
                       transition-transform duration-300
                       group-hover:scale-105
-                    ">
+                    "
+                    >
                       <Icon className="w-4 h-4 text-white" />
                     </div>
 
@@ -182,12 +188,12 @@ export function SaaSEcosystem() {
 
         <div className="text-center">
           <div className="inline-block bg-gradient-to-r from-green-600 to-teal-600 text-white px-6 py-3 rounded-xl text-sm shadow">
-            <span className="font-semibold">Real-World Validation:</span> Our AI models are trained on 
-              anonymised data from live diabetic centres, ensuring clinically relevant and 
-              contextually accurate insights for diabetes care and management
+            <span className="font-semibold">Real-World Validation:</span> Our AI
+            models are trained on anonymised data from live diabetic centres,
+            ensuring clinically relevant and contextually accurate insights for
+            diabetes care and management
           </div>
         </div>
-
       </div>
     </section>
   );

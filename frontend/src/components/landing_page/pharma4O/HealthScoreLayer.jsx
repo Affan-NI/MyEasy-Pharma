@@ -4,7 +4,6 @@ export function HealthScoreLayer() {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-5xl mx-auto px-4">
-
         <motion.div
           className="text-center mb-8"
           initial={{ opacity: 0, y: 25 }}
@@ -15,9 +14,9 @@ export function HealthScoreLayer() {
           </h2>
 
           <p className="text-sm text-gray-600 max-w-2xl mx-auto">
-            By combining multiple behavioural, clinical and lifestyle indicators,
-            digital health platforms can generate simplified health views that
-            support better awareness and proactive care decisions.
+            By combining multiple behavioural, clinical and lifestyle
+            indicators, digital health platforms can generate simplified health
+            views that support better awareness and proactive care decisions.
           </p>
         </motion.div>
 

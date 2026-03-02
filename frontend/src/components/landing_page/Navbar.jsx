@@ -9,7 +9,7 @@ export function Navbar() {
   const navigate = useNavigate();
   const handleNavigation = () => {
     navigate("/"); // Navigate to the home page
-  }
+  };
 
   const navLinkClass = ({ isActive }) =>
     isActive
@@ -23,11 +23,9 @@ export function Navbar() {
 
   return (
     <header className="w-full sticky top-0 z-50 bg-white shadow-sm">
-
       {/* Top Header */}
       <div className="border-b">
         <div className="w-ful px-6 h-14 flex items-center justify-between">
-
           {/* Logo + Address */}
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
@@ -37,9 +35,9 @@ export function Navbar() {
                 className="h-14 w-auto"
                 onClick={handleNavigation}
               />
-                  <span
-                  onClick={handleNavigation}
-                  className="
+              <span
+                onClick={handleNavigation}
+                className="
                     font-extrabold 
                     text-xl 
                     tracking-wide 
@@ -52,10 +50,9 @@ export function Navbar() {
                     drop-shadow-sm
                     cursor-pointer
                   "
-                >
-                  MyEasy Pharma
-                </span>
-
+              >
+                MyEasy Pharma
+              </span>
             </div>
 
             {/* <div className="hidden md:flex items-center gap-1 text-sm text-gray-600 cursor-pointer">
@@ -89,31 +86,44 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Main Menu (Original Links Preserved) */}
+      {/* Main Menu  */}
       <div className="border-b hidden lg:block">
         <div className="w-ful px-6 h-12 flex items-center gap-8 text-sm font-medium">
-          <NavLink to="/" className={navLinkClass}>Home</NavLink>
-          <NavLink to="/health-score" className={navLinkClass}>Health Score</NavLink>
-          <NavLink to="/pharma40" className={navLinkClass}>Pharma 4.0</NavLink>
-          <NavLink to="/platform" className={navLinkClass}>Platform</NavLink>
-          <NavLink to="/service" className={navLinkClass}>Services</NavLink>
-          <NavLink to="/about" className={navLinkClass}>About</NavLink>
-          <NavLink to="/contact" className={navLinkClass}>Contact</NavLink>
+          <NavLink to="/" className={navLinkClass}>
+            Home
+          </NavLink>
+          <NavLink to="/health-score" className={navLinkClass}>
+            Health Score
+          </NavLink>
+          <NavLink to="/pharma40" className={navLinkClass}>
+            Pharma 4.0
+          </NavLink>
+          <NavLink to="/platform" className={navLinkClass}>
+            Platform
+          </NavLink>
+          <NavLink to="/service" className={navLinkClass}>
+            Services
+          </NavLink>
+          <NavLink to="/about" className={navLinkClass}>
+            About
+          </NavLink>
+          <NavLink to="/contact" className={navLinkClass}>
+            Contact
+          </NavLink>
         </div>
       </div>
 
- {/* Category Bar */}
-<div className="relative bg-[#0f3f3a]">
+      {/* Category Bar */}
+      <div className="relative bg-[#0f3f3a]">
+        {/* Left Fade */}
+        <div className="pointer-events-none absolute left-0 top-0 h-full w-8 bg-gradient-to-r from-[#0f3f3a] to-transparent z-10" />
 
-  {/* Left Fade */}
-  <div className="pointer-events-none absolute left-0 top-0 h-full w-8 bg-gradient-to-r from-[#0f3f3a] to-transparent z-10" />
+        {/* Right Fade */}
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-[#0f3f3a] to-transparent z-10" />
 
-  {/* Right Fade */}
-  <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-[#0f3f3a] to-transparent z-10" />
-
-  {/* Scrollable Content */}
-  <div
-    className="
+        {/* Scrollable Content */}
+        <div
+          className="
       w-full
       px-4
       h-11
@@ -127,62 +137,124 @@ export function Navbar() {
       scroll-smooth
       scrollbar-hide
     "
-  >
-    <NavLink to="/commingsoon" state="Products" className="flex-shrink-0 hover:text-green-300 transition">
-      Products
-    </NavLink>
-    <NavLink to="/diabetescare" state="Diabetes Care" className="flex-shrink-0 hover:text-green-300 transition">
-      Diabetes Care
-    </NavLink>
-    <NavLink to="/womencare" state="Women Care" className="flex-shrink-0 hover:text-green-300 transition">
-      Women Care
-    </NavLink>
-    <NavLink to="/heartcare" state="Heart Car" className="flex-shrink-0 hover:text-green-300 transition">
-      Heart Care
-    </NavLink>
-    <NavLink to="/nutirition" state="Nutrition" className="flex-shrink-0 hover:text-green-300 transition">
-      Nutrition
-    </NavLink>
-    <NavLink to="/dietplan" state="Diet Plan" className="flex-shrink-0 hover:text-green-300 transition">
-      Diet Plan
-    </NavLink>
-    <NavLink to="/commingsoon" state="Doctors & Clinicians" className="flex-shrink-0 hover:text-green-300 transition">
-      Doctors & Clinicians
-    </NavLink>
-    <NavLink to="/commingsoon" state="Pharma & Research" className="flex-shrink-0 hover:text-green-300 transition">
-      Pharma & Research
-    </NavLink>
-    <NavLink to="/commingsoon" state="Care Coordinators" className="flex-shrink-0 hover:text-green-300 transition">
-      Care Coordinators
-    </NavLink>
-  </div>
-</div>
+        >
+          <NavLink
+            to="/commingsoon"
+            state="Products"
+            className="flex-shrink-0 hover:text-green-300 transition"
+          >
+            Products
+          </NavLink>
+          <NavLink
+            to="/diabetescare"
+            state="Diabetes Care"
+            className="flex-shrink-0 hover:text-green-300 transition"
+          >
+            Diabetes Care
+          </NavLink>
+          <NavLink
+            to="/womencare"
+            state="Women Care"
+            className="flex-shrink-0 hover:text-green-300 transition"
+          >
+            Women Care
+          </NavLink>
+          <NavLink
+            to="/heartcare"
+            state="Heart Car"
+            className="flex-shrink-0 hover:text-green-300 transition"
+          >
+            Heart Care
+          </NavLink>
+          <NavLink
+            to="/nutirition"
+            state="Nutrition"
+            className="flex-shrink-0 hover:text-green-300 transition"
+          >
+            Nutrition
+          </NavLink>
+          <NavLink
+            to="/dietplan"
+            state="Diet Plan"
+            className="flex-shrink-0 hover:text-green-300 transition"
+          >
+            Diet Plan
+          </NavLink>
+          <NavLink
+            to="/commingsoon"
+            state="Doctors & Clinicians"
+            className="flex-shrink-0 hover:text-green-300 transition"
+          >
+            Doctors & Clinicians
+          </NavLink>
+          <NavLink
+            to="/commingsoon"
+            state="Pharma & Research"
+            className="flex-shrink-0 hover:text-green-300 transition"
+          >
+            Pharma & Research
+          </NavLink>
+          <NavLink
+            to="/commingsoon"
+            state="Care Coordinators"
+            className="flex-shrink-0 hover:text-green-300 transition"
+          >
+            Care Coordinators
+          </NavLink>
+        </div>
+      </div>
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="lg:hidden border-t">
           <nav className="flex flex-col gap-2 p-4 text-sm">
-
-            {/* Original Routes Preserved */}
-            <NavLink to="/" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass}>
+            <NavLink
+              to="/"
+              onClick={() => setMobileMenuOpen(false)}
+              className={mobileNavLinkClass}
+            >
               Home
             </NavLink>
-            <NavLink to="/health-score" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass}>
+            <NavLink
+              to="/health-score"
+              onClick={() => setMobileMenuOpen(false)}
+              className={mobileNavLinkClass}
+            >
               Health Score
             </NavLink>
-            <NavLink to="/pharma40" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass}>
+            <NavLink
+              to="/pharma40"
+              onClick={() => setMobileMenuOpen(false)}
+              className={mobileNavLinkClass}
+            >
               Pharma 4.0
             </NavLink>
-            <NavLink to="/platform" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass}>
+            <NavLink
+              to="/platform"
+              onClick={() => setMobileMenuOpen(false)}
+              className={mobileNavLinkClass}
+            >
               Platform
             </NavLink>
-            <NavLink to="/service" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass}>
+            <NavLink
+              to="/service"
+              onClick={() => setMobileMenuOpen(false)}
+              className={mobileNavLinkClass}
+            >
               Services
             </NavLink>
-            <NavLink to="/about" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass}>
+            <NavLink
+              to="/about"
+              onClick={() => setMobileMenuOpen(false)}
+              className={mobileNavLinkClass}
+            >
               About
             </NavLink>
-            <NavLink to="/contact" onClick={() => setMobileMenuOpen(false)} className={mobileNavLinkClass}>
+            <NavLink
+              to="/contact"
+              onClick={() => setMobileMenuOpen(false)}
+              className={mobileNavLinkClass}
+            >
               Contact
             </NavLink>
 

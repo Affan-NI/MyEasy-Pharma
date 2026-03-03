@@ -153,7 +153,7 @@ const App = () => {
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-emerald-100 via-transparent to-transparent"></div>
         </div>
         <h1 className="text-3xl md:text-5xl font-black mb-4 relative z-10">
-          Diabetes Health Score
+          Health Score
         </h1>
         <p className="text-emerald-700 text-lg relative z-10 font-medium">
           Advanced Pharma 4.0 Clinical Calculator
